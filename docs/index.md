@@ -1,17 +1,16 @@
-# A wiki for the COLOSS BEEBOOKIV: Standa
+#
+![wikiCOLOSS](assets/Manae_sketches-COLOSS.jpg)
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This online resource is part of the chapter **“Standard methods and good practices in Apis honey bee ‘omics research”** from the BEEBOOK volume IV. 
 
-## Commands
+This collaborative work has been developed by 16 honey bee experts, which you can learn more about in the **[Meet the Team]()** section.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+You can easily navigate between each section using the **table of contents** on the left side.
 
-## Project layout
+---
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### Citation
+
+Please cite the methods and tutorials described here as:
+
+> “Techer et al., Standard methods and good practices in Apis honey bee omics research, Journal of Apicultural Research TJAR (in press)"

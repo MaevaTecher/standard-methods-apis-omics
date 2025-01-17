@@ -1,45 +1,64 @@
-# Bibulaque quorum cinctum lateri pone sputantem est
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
 
-## Inventa in illa oculos
+# About the COLOSS Wiki Initiative
 
-Lorem markdownum, ve fuit invidiosa, nec ore ambo vincere *aequor attonitos*.
-Tumulo regina pudetque Parrhasis deum vatemque tamen. Tibi nam, sacra, nec sumus
-rogando quaesita.
+In the past decades, COLOSS members have joined forces multiple times to
+develop and condense standard methods related to honey bees, their
+pests, pathogens, and hive products. This led to the open access of four
+**BEEBOOK** volumes that have been enthusiastically welcomed by honey
+bee researchers worldwide. Among the chapters, the “**Standard methods
+for molecular research in *Apis mellifera* **” written by Evans and
+collaborators in 2013 has been a cornerstone for the standardization of
+honey bee molecular studies. However, since sequencing technologies and
+analyzing algorithms have made tremendous progress, many described
+methods needed a refreshing update. In parallel, other *Apis* species
+genomes have been sequenced, thus opening new research avenues in a
+comparative framework.
 
-Rhodon non; plura tamen: quis non tota ferrum ducat magni meminere filia Non et.
-Doli fraternis imagine; miratur Caeneus et et imagine! Incertas sub nec: Claros
-sua materiam, murice et vicem. Illi abiit damus incedere, miseris verbis Aetnae
-Priapi quique dea, terras. In ter, est *non*: omnia ferenda praebentem consulat.
+------------------------------------------------------------------------
 
-## In partim non mihi miserabile Emathii precando
+## Advancing Multi-Omics Research Reproducibility
 
-Eruta vos undis iuvenis. Vultum quod **Boote possunt utque** erant gemuere
-laniavit!
+Our team has spent the last years developing and summarizing new
+protocols related to the recent multi-omics field advances in a new
+chapter entitled “**Standard methods and good practices in *Apis* honey
+bee ‘omics research**.” At the same time, next-generation sequencing and
+bioinformatics will continue to improve and change, mirroring how the
+multi-omics field is rapidly evolving. As a result, we concluded that a
+classical chapter would become outdated unless we adopted a modern
+communication approach.
 
-- Ulla se nebulas eundi animumque iuvenes
-- Ruat tumulati tectam vidistis inritamen altissima et
-- Super litatis
-- Dixit cunctatusque orta
+Online shared resources such as databases, codes, Wikis, and tutorials
+are great ways to provide protocols in a dynamic and collaborative
+framework. We propose here a set of standard protocols related to
+applications of genomics, transcriptomics, proteomics, epigenomics,
+metabolomics, metagenomics, and microbiome analyses in *Apis* honey bees.
+One advantage of this platform will be version control of methods, which
+can be corrected and improved by the developing team at the suggestion
+of COLOSS members or experts. This would allow readers to track major
+changes related to the progress of wet lab techniques or computing
+pipelines.
 
-Te hoc galea, capistris fulvo, aut primus, ego nomen viri harenam laborem tacita
-impia atque: ego. Heu Cumarum quaeque et horrenda vires vero incursu, non subit
-non? Coniunx standi nullus contraxere rude; ire tenet et fugae simul aquas. Sunt
-arva sensisse fundere, ipsum nostro **creverunt ventis sacra** conciderant
-membra damno crimine; illa munera?
+While initially, omics data are often created for highly specialized
+scope and research questions, we noted that *Apis* honey bee research
+slowly moves toward multi-omics integration. This transition will push
+the boundaries of our understanding regarding honey bee biology and
+evolution. However, this would require the establishment of resources to
+aid communication, information sharing about tools and techniques, and
+data interpretation between different teams of honey bee experts. We
+hope that this chapter will lay some foundations by reviewing jargon and
+tools specific to each omic field and support the communication of
+innovative studies taking advantage of large and complex datasets.
 
-## Non posse ab futurus vestigia sic locuta
+The methods and tutorials described here are still part of the chapter
+“Standard Methods and Good Practices in *Apis* Honey Bee ‘Omics Research”
+in BEEBOOK Volume IV. If these resources are useful for you, please cite
+our work: “Techer et al., Standard methods and good practices in *Apis*
+honey bee omics research, Journal of Apicultural Research TJAR (in
+press)"
 
-Argolicas cetera solebat; cum deum; fiet timidusque vetuere his. **Rauco erat
-accedere** lumina; adsiduae fugit et credens, unda conbiberat certasse tamen ne
-postquam, mihi. Putes viriles formosos mirabile Euphrates post iuvenes pudore
-palmas, sic fraudem rubens se? Potura me ludunt iunguntur veteris poenas
-attraxerat sors arma cacumine.
-
-Loca deos fecit infantem in lenta intrat Clara nuntia praebebat visus aut,
-iniectam ab. Perstat spargit o cupio fluentum loco, sum parvam quae, sua. Quam
-linquit litora; est illi, viridi parentum cuspide.
-
-Fruges mortalia: sacra: populum destinat vimque eventus reddant usus, inde
-*proxima iacit* sustinet, Diomedis. Manu forcipe dum cupies variat mollesque
-manusque quamvis matrona sed bracchia, quae. Singultuque quaecumque poscor,
-phocen Iuno cum Lichae armenti, **carus succincta**?
+------------------------------------------------------------------------

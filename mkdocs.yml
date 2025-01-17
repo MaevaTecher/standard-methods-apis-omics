@@ -1,7 +1,60 @@
-site_name: wikiCOLOSS
+site_name: "wikiCOLOSS: Standard Methods for Apis Omics Research"
 theme:
-  name: readthedocs
+  name: material
   highlightjs: true
   hljs_languages:
     - yaml
     - rust
+  analytics:
+    gtag: G-ABC123
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: yellow
+      accent:  teal
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: amber
+      accent: blue
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  logo: assets/Coloss-logo.png
+  favicon: assets/Coloss-logo.png
+nav:
+  - Home: index.md
+  - About: 
+      - "Why a wikiCOLOSS?": about.md
+      - "Meet the team": theteam.md
+      - "Chapter Layout": chapt_layout.md
+  - "1. The omics revolution in Apis: more data than meets the eye" : Part_1.md
+  - "2. Sample management" : Part_2.md
+  - "3. Genome sequencing" :
+      - "3.1. Introduction": Part_3_1.md
+      - "3.1. Genome sequencing technologies": Part_3_2.md
+      - "3.3. The reference genome": Part_3_3.md
+      - "3.4. Small and large variant detection": Part_3_4.md
+      - "3.5. Sequencing museum specimens": Part_3_5.md
+  - "4. Whole-genome population and association studies" :
+      - "4.1. Introduction": Part_4_1.md
+      - "4.2. Ploidy and sampling considerations": Part_4_2.md
+      - "4.3. SNP and indel detection": Part_4_3.md
+      - "4.4. Comparing whole genomes": Part_4_4.md
+      - "4.5. Genome-wide association studies": Part_4_5.md
+      - "4.6. Population genomics: Experimental design": Part_4_6.md
+      - "4.7. Population genomics: Filtering and summary statistics using PLINK": Part_4_7.md
+      - "4.8. Population genomics: Inferring population structure using ADMIXTURE": Part_4_8.md
+      - "4.9. Landscape genomics: An example using LFMM": Part_4_9.md
+      - "4.10. Applying population genomics to conservation: Reduced SNP analysis": Part_4_10.md
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
