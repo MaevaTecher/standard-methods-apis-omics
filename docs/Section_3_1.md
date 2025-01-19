@@ -2,7 +2,7 @@
 
 ## 3.1. Introduction
 
-As for other species, the sequencing of *Apis* DNA has many applications that can be divided into three categories: *de novo* sequencing, resequencing, and transcript sequencing. While the last category technically relies on sequencing cDNA reads, its use is intended to inform the structure and expression of genes in honey bee genome, a topic that is covered in [Section 6](https://youneedawiki.com/app/page/1xCroRTPWU4mk711qSP4X6GCmIwLz9PdB?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2).
+As for other species, the sequencing of *Apis* DNA has many applications that can be divided into three categories: *de novo* sequencing, resequencing, and transcript sequencing. While the last category technically relies on sequencing cDNA reads, its use is intended to inform the structure and expression of genes in honey bee genome, a topic that is covered in [Section 6]().
 
 *De novo* sequencing of *Apis* species started in 2006 but is punctually used to generate improved reference genomes and to represent new subspecies (see Figure 2) (Toth & Zayed, 2021). To achieve successful *de novo* sequencing, the utilization of the most advanced technology available is necessary.The longest possible reads should be produced, possibly from one single sample, and these will be assembled into contigs based on partial sequence overlap (Figure 3A). In turn, these contigs will be assembled using other mapping methods such as optical maps or Hi-C, to reconstruct larger fragments (scaffolds), aiming at a chromosome-level assembly.
 

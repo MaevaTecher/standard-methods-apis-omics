@@ -94,9 +94,9 @@ plink --bfile pop_gene \
 
 #### 4.7.2.3. Regular PLINK text files
 
-The regular **PLINK** text files are formed by the PED and MAP files. The PED file is a white-space delimited file that stores the genotype calls. It contains six mandatory fields/columns which correspond to the *file.fam*fields. After these columns, the PED file is followed by 2\*(number of variants) columns with the genotype of each locus in the same order as in the MAP file. The MAP file contains the variant information corresponding to the first four columns of *pop_gene.bim*.
+The regular **PLINK** text files are formed by the PED and MAP files. The PED file is a white-space delimited file that stores the genotype calls. It contains six mandatory fields/columns which correspond to the *file.fam*fields. After these columns, the PED file is followed by 2 (number of variants) columns with the genotype of each locus in the same order as in the MAP file. The MAP file contains the variant information corresponding to the first four columns of *pop_gene.bim*.
 
-The MAP file should have the same root name as the PED file and contain the same number of loci. For instance, if there are genotypes for 10 loci and 12 individuals, the MAP file will contain 10 lines and four columns, and the PED file will contain 12 lines and 26 columns (10 loci \*2 + 6 mandatory columns). The loci in the PED file do not have to comply with the genomic order, but they must be in the same order as in the MAP file.
+The MAP file should have the same root name as the PED file and contain the same number of loci. For instance, if there are genotypes for 10 loci and 12 individuals, the MAP file will contain 10 lines and four columns, and the PED file will contain 12 lines and 26 columns (10 loci *2 + 6 mandatory columns). The loci in the PED file do not have to comply with the genomic order, but they must be in the same order as in the MAP file.
 
 To convert *PLINK 1 binary* format to *regular PLINK text* file, one can use the following command:
 
@@ -123,7 +123,7 @@ It is common for genome-wide datasets to have individuals or variants with missi
 plink --bfile pop_gen --missing --out pop_gen
 ```
 
-It is highly recommended to discard individuals or variants with high levels of missing data. The missing data thresholds are arbitrary, but values of 10% to 30% are commonly used in the literature (Henriques, Wallberg, et al., 2018; Melanie Parejo et al., 2016; Wallberg et al., 2014; Wragg et al., 2016). To remove the variants with \> 20% missing data (--geno 0.2) and individuals with \>10% missing data (--mind 0.10), for example, the following command can be run:
+It is highly recommended to discard individuals or variants with high levels of missing data. The missing data thresholds are arbitrary, but values of 10% to 30% are commonly used in the literature (Henriques, Wallberg, et al., 2018; Melanie Parejo et al., 2016; Wallberg et al., 2014; Wragg et al., 2016). To remove the variants with > 20% missing data (--geno 0.2) and individuals with >10% missing data (--mind 0.10), for example, the following command can be run:
 
 ``` bash
 plink --bfile pop_gen \
@@ -149,7 +149,7 @@ plink --bfile pop_gen_MD \
 
 In the report generated using this command, the first and second columns contain the chromosome and the variant ID followed by the code of the minor (3^rd^ column) and major (4^th^ column) variants and the frequency of the minor allele (5^th^ column). The last column (6^th^) contains the number of allele observations.
 
-To remove the variants with MAF \< 5%, for instance, and create a new file set (here called *pop_gen_MD_maf005*), the following command can be run:
+To remove the variants with MAF < 5%, for instance, and create a new file set (here called *pop_gen_MD_maf005*), the following command can be run:
 
 ``` bash
 plink --bfile pop_gen_MD \
@@ -183,9 +183,9 @@ plink --bfile pop_gen_MD_maf005 \
     --indep-pairwise 50 
 ```
 
-The flag `--indep-pairwise` requires three parameters: the window size, the number of SNPs to shift each step and r^2^. The values of r^2^ range between 0 and 1. When r^2^ = 1, the loci provide exactly the same information. When r^2^ = 0, the loci are in perfect equilibrium. Here, LD is calculated between each pair of SNPs using a window of 50 SNPs. If one pair of SNPs has r^2^ \> 0.5 one of them will be removed. After that, the window will be shifted to five SNPs, and the procedure is repeated until all SNP pairs are examined. Note that lower values of r^2^ and bigger window sizes will remove more loci.
+The flag `--indep-pairwise` requires three parameters: the window size, the number of SNPs to shift each step and r^2^. The values of r^2^ range between 0 and 1. When r^2^ = 1, the loci provide exactly the same information. When r^2^ = 0, the loci are in perfect equilibrium. Here, LD is calculated between each pair of SNPs using a window of 50 SNPs. If one pair of SNPs has r^2^ > 0.5 one of them will be removed. After that, the window will be shifted to five SNPs, and the procedure is repeated until all SNP pairs are examined. Note that lower values of r^2^ and bigger window sizes will remove more loci.
 
-After running this command, two files will be created, one is named *plink.prune.in*, which contains the loci that will be retained (r^2^ \< 0.5), and the other one is named *plink.prune.out*, which contains the loci that will be discarded. These files can be used as arguments of the flags `--extract` (*plink.prune.in*) or --exclude (*plink.prune.out*).
+After running this command, two files will be created, one is named *plink.prune.in*, which contains the loci that will be retained (r^2^ < 0.5), and the other one is named *plink.prune.out*, which contains the loci that will be discarded. These files can be used as arguments of the flags `--extract` (*plink.prune.in*) or --exclude (*plink.prune.out*).
 
 To extract to a new datafile the loci that are in the file *plink.prune.in, the* following command can be run:
 
@@ -196,7 +196,7 @@ plink --bfile pop_gen_MD_maf005 \
 --out pop_gen_MD_maf005_pruneddata 
 ```
 
-Sometimes we do not want to discard SNPs, but we want to calculate the LD in our data. LD can be computed using the flag `--r2`. However, to reduce the output size, only the pairs with r^2^ \> 0.2 and within a distance \< 1 Mb will be printed in the output by default. To modify these thresholds, the flag `--ld-window` or `--ld-window-kb` is used to specify the maximum distance between loci and the flag `--ld-window-r2` is used to specify the minimum r^2^. Using the following command, the r^2^ values will be obtained for all pairs of loci with r^2^ \> 0.5 in a window of 50 Kb. The output called *pop_gen_MD_maf005_pruneddata*.*ld* will be created, and the r^2^ values will be placed in the 7^th^ column.
+Sometimes we do not want to discard SNPs, but we want to calculate the LD in our data. LD can be computed using the flag `--r2`. However, to reduce the output size, only the pairs with r^2^ > 0.2 and within a distance < 1 Mb will be printed in the output by default. To modify these thresholds, the flag `--ld-window` or `--ld-window-kb` is used to specify the maximum distance between loci and the flag `--ld-window-r2` is used to specify the minimum r^2^. Using the following command, the r^2^ values will be obtained for all pairs of loci with r^2^ > 0.5 in a window of 50 Kb. The output called *pop_gen_MD_maf005_pruneddata*.*ld* will be created, and the r^2^ values will be placed in the 7^th^ column.
 
 ``` bash
 plink --bfile pop_gen_MD_maf005_pruneddata \

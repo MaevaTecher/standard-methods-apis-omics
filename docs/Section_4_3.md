@@ -179,7 +179,7 @@ gatk SelectVariants \
 
 ### 4.3.7. Filtering variants with **VCFtools**: Data quality
 
-To ensure a high-quality dataset, SNPs should be filtered using not only quality scores, but also, for instance, the mean depth and missing data. Here, the software **VCFtools** (Danecek et al., 2011) is used to include biallelic SNPs (--max-alleles) with at least 5 read depth (--min-meanDP). Further information about SNP filtering, such as the correlation between markers or linkage disequilibrium (LD), can be found in [Section 4.7](https://youneedawiki.com/app/page/1IUnW7oMAEYX0T5pebD3S0LaYgRaxJtc7d96HUFuaPa0?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2).
+To ensure a high-quality dataset, SNPs should be filtered using not only quality scores, but also, for instance, the mean depth and missing data. Here, the software **VCFtools** (Danecek et al., 2011) is used to include biallelic SNPs (--max-alleles) with at least 5 read depth (--min-meanDP). Further information about SNP filtering, such as the correlation between markers or linkage disequilibrium (LD), can be found in [Section 4.7](https://maevatecher.github.io/standard-methods-apis-omics/Part_4_7/).
 
 ``` bash
 vcftools \
@@ -209,11 +209,11 @@ java -Xmx8g -jar snpEff.jar Apis_mellifera all_samples_filter_2.vcf.gz > all_sam
 
 ### 4.3.10. SNP analysis by sequencing pooled samples
 
-Pooling offers an alternative for screening populations or subspecies using genome-wide markers and high-throughput technologies. Group-level data obtained from genotyping experiments will deviate from individual-level data in the sense that frequencies of the different alleles observed in the pool, rather than genotype polymorphisms, will be obtained (see [Section 4.2](https://youneedawiki.com/app/page/1Dlftfc-2_gR1pzulaHDakHHMkBNhdY7kYuZb1ldQPm8?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2)[.2]{.underline}). Allele frequencies can be used directly or transformed into mean genotype using **PLINK** (see [Section 4.5](https://youneedawiki.com/app/page/1DcRFPl1JXFf2qRnoRiaAY6bC38v07x6azvPIY-eyYls?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2)[.4.3]{.underline}), or dedicated genotype reconstruction methods. Such methods are currently available to use such allele frequencies, from drone offspring or from a worker pool (Eynard et al., 2022) to obtain queen genotypes. The procedure described here allows the estimation of allele frequencies in pooled samples by using the **PoPoolation** software (Kofler et al., 2011).
+Pooling offers an alternative for screening populations or subspecies using genome-wide markers and high-throughput technologies. Group-level data obtained from genotyping experiments will deviate from individual-level data in the sense that frequencies of the different alleles observed in the pool, rather than genotype polymorphisms, will be obtained (see [Section 4.2](https://maevatecher.github.io/standard-methods-apis-omics/Part_4_2/)). Allele frequencies can be used directly or transformed into mean genotype using **PLINK** (see [Section 4.5](https://maevatecher.github.io/standard-methods-apis-omics/Part_4_5/)), or dedicated genotype reconstruction methods. Such methods are currently available to use such allele frequencies, from drone offspring or from a worker pool (Eynard et al., 2022) to obtain queen genotypes. The procedure described here allows the estimation of allele frequencies in pooled samples by using the **PoPoolation** software (Kofler et al., 2011).
 
 #### 4.3.10.1. From FASTQ files to BAM files
 
-Mapping reads and duplicate reads detection are performed as described above ([Section 4.3](https://youneedawiki.com/app/page/1C16yc7avpA8r_aClSNnOCCARWhZgQ_AL0VGIZHd320U?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2)[.1]{.underline} and [Section 4.3.2]{.underline}).
+Mapping reads and duplicate reads detection are performed as described above (see [Section 4.3](https://maevatecher.github.io/standard-methods-apis-omics/Part_4_3/)).
 
 #### 4.3.10.2. SNP selection and pileup files
 

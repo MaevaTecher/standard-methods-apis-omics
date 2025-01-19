@@ -6,13 +6,13 @@ Landscape genomics, which addresses how local environmental conditions influence
 
 When compared to F~ST~-based methods, GEA methods can potentially identify selective pressures driving local adaptation. Besides, the combined analysis of genetic data and environmental data increases the power to detect loci that may be under selection (De Mita et al., 2013; de Villemereuil et al., 2014; Rellstab et al., 2015). However, each GEA method has advantages and disadvantages (see (Rellstab et al., 2015)) for further details), and combining different approaches helps reduce uncertainty of the results. Here, we will describe how to use the latent factor mixed model approach (**LFMM**).
 
-**LFMM** is available in a command line version (1.5), and it can be downloaded from <https://bcm-uga.github.io/lfmm/index.html.> The latest version (2.0) is also available in an **R** package called **lfmm**. This tool models the effect of population structure using latent factors; therefore, population structure should be previously investigated. Here, the results obtained in the [Section 4.8](https://youneedawiki.com/app/page/1J8sNMbKOYmL25FY44_Zkoq5gqy08ndUkbKKW2A5QJa8?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2) will be integrated in this example.
+**LFMM** is available in a command line version (1.5), and it can be downloaded from <https://bcm-uga.github.io/lfmm/index.html.> The latest version (2.0) is also available in an **R** package called **lfmm**. This tool models the effect of population structure using latent factors; therefore, population structure should be previously investigated. Here, the results obtained in the [Section 4.8](https://maevatecher.github.io/standard-methods-apis-omics/Part_4_8/) will be integrated in this example.
 
 ### 4.9.1. Materials
 
 To run **LFMM**, two datasets will be required:
 
--   Genomic dataset: The *PLINK 1 binary* file obtained in [Section 4.7](https://youneedawiki.com/app/page/1IUnW7oMAEYX0T5pebD3S0LaYgRaxJtc7d96HUFuaPa0?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2)[.2.5]{.underline}, called *pop_gen_MD_maf005.*
+-   Genomic dataset: The *PLINK 1 binary* file obtained in [Section 4.7](https://maevatecher.github.io/standard-methods-apis-omics/Part_4_7/), called *pop_gen_MD_maf005.*
 
 -   Environmental variables dataset: A file called *ex_env.csv*, containing 36 variables for each individual.
 
@@ -71,7 +71,7 @@ Following that, a file called *cor_matrix.csv* will be created. The values with 
 
 Now that the bioclimatic dataset is prepared, the genetic dataset needs to be handled. LFMM accepts its own format (.lfmm), and the software has a function to convert PED format to .lfmm.
 
-**Step 6.** Convert the *pop_gen_MD_maf005* binary *PLINK 1 binary* file obtained in [Section 4.7](https://youneedawiki.com/app/page/1IUnW7oMAEYX0T5pebD3S0LaYgRaxJtc7d96HUFuaPa0?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2)[.2.5]{.underline} to a *regular PLINK text* file.
+**Step 6.** Convert the *pop_gen_MD_maf005* binary *PLINK 1 binary* file obtained in [Section 4.7](https://maevatecher.github.io/standard-methods-apis-omics/Part_4_7/) to a *regular PLINK text* file.
 
 ``` r
 plink --bfile pop_gen_MD_maf005 --keep-allele-order --recode --out

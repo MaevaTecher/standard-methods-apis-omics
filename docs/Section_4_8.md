@@ -8,11 +8,11 @@ To study the genetic differences among individuals, a population structure analy
 
 ### 4.8.1. Download and installation
 
-Download and install **PLINK** (see [Section 4.7](https://youneedawiki.com/app/page/1IUnW7oMAEYX0T5pebD3S0LaYgRaxJtc7d96HUFuaPa0?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2)), the online tool [**CLUMPAK**](http://clumpak.tau.ac.il/) (Clustering Markov Packager Across K (Kopelman et al., 2015), and [**ADMIXTURE**](https://dalexander.github.io/admixture/download.html) (version 1.3).
+Download and install **PLINK** (see [Section 4.7](https://maevatecher.github.io/standard-methods-apis-omics/Part_4_7/)), the online tool [**CLUMPAK**](http://clumpak.tau.ac.il/) (Clustering Markov Packager Across K (Kopelman et al., 2015), and [**ADMIXTURE**](https://dalexander.github.io/admixture/download.html) (version 1.3).
 
 ### 4.8.2. Input files
 
-**ADMIXTURE** accepts **PLINK** and **EIGENSTRAT** files as inputs. Here, the *binary 1 PLINK* format will be used. Because of the **ADMIXTURE** assumptions, the file named pop *gen_MD_maf005_pruneddata* generated in [Section 4.7](https://youneedawiki.com/app/page/1IUnW7oMAEYX0T5pebD3S0LaYgRaxJtc7d96HUFuaPa0?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2)[.2.7]{.underline} will be used. **Note:** In case the relatedness of the individuals under study is unknown, plink2 and the following command line can be run:
+**ADMIXTURE** accepts **PLINK** and **EIGENSTRAT** files as inputs. Here, the *binary 1 PLINK* format will be used. Because of the **ADMIXTURE** assumptions, the file named pop *gen_MD_maf005_pruneddata* generated in [Section 4.7](https://maevatecher.github.io/standard-methods-apis-omics/Part_4_7/) will be used. **Note:** In case the relatedness of the individuals under study is unknown, plink2 and the following command line can be run:
 
 ``` bash
 plink2 --bfile out_dataset \

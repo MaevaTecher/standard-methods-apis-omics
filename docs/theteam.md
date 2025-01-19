@@ -34,7 +34,7 @@ Lílian earned her PhD at the Universidade Federal do Rio Grande do Sul, Brazil.
 
 GenPhySE, Université de Toulouse, INRAE, INPT, INP-ENVT, 31326 Castanet Tolosan, France Labogena DNA, 78353 Jouy-en-Josas, France
 
-### Expertise: Population genomics, quantitative genetics, livestock species, *Apis mellifer*a 
+### Expertise: Population genomics, quantitative genetics, livestock species, *Apis mellifera* 
 
 As an undergraduate, Sonia studied wildlife conservation and the use of population genetics to advise on conservation strategies. In 2018 she graduated with a PhD in Animal Breeding and Genetics from the Erasmus Mundus project EGS-ABG with a double diploma from Wageningen University and AgroParisTech, where she looked into ways to mitigate the impact of selection on genetic diversity in livestock using next generation sequencing data. After completing her PhD she joined INRAE, in Toulouse, to work on the BeeStrong project. The aim was to identify genetic markers linked to resistance to *Varroa destructor* infestation in the French *Apis mellifera* population using pool sequencing experiments. She also contributed to a population genomics project to better understand and describe the genetic diversity observed in the European bee populations. Always fond of analysing new data and developing new methods, in 2023 she moved to a new postdoctoral position working on epigenetics and how it can be included in current breeding decisions in livestock species. Very much in love with honey bees, she hopes to be able to develop her own research line using new data and methods to answer challenges faced in honey bee genomics.
 

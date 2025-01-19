@@ -1,0 +1,13 @@
+# 8. Proteomics
+
+## 8.3. Liquid chromatography and mass spectrometry
+
+There are many types of columns, chromatography systems, and mass spectrometers that can be used for proteomics, precluding a universal standard method. Here we offer four main points to consider when deciding on a specific approach.
+
+1.   The amount of sample to inject depends on the sample complexity, chromatography resolution, and instrument sensitivity, but it is normally in the range of 0.1 – 1 µg (lower complexity samples will require less material to inject).
+
+2.   If a sample has high complexity but is dominated by a relatively small number of highly abundant peptides, such as what is routinely observed in mammalian plasma (Hortin & Sviridov, 2010) or honey bee ejaculates (McAfee et al., 2020), the sample may benefit from orthogonal fractionation upstream of LC-MS/MS. That is, the peptides should be fractionated based on different chemical or physical properties than utilized in the downstream LC (which normally separates peptides based on hydrophobicity) in order to reduce ion suppression by the highly abundant species. Examples of orthogonal or semi-orthogonal fractionation techniques are high-pH reverse-phase fractionation (Batth et al., 2014), strong cation exchange (Edelmann, 2011), size exclusion chromatography (Kristensen et al., 2012), and isoelectric trapping (Cologna et al., 2010).
+
+3.   The final stage of chromatography, which is online-coupled to the mass spectrometer, is nearly always C18 reverse phase run under acidic conditions. Different chromatography systems have different constraints, but in general, the length of the chromatography gradient trades off peak intensity with peak separation: longer gradients offer better separation, but eluent peaks are broader with lower intensity, which may affect spectrum quality. Gradients typically ramp from 2% to 80% acetonitrile over the course of 45 – 180 minutes. Refer to vendor recommendations for information on column selection and instrument settings.
+
+4.   There are two main data acquisition approaches for shot-gun proteomics: data-dependent acquisition (DDA) and data-independent acquisition (DIA) (Doerr, 2014). DIA is growing in popularity, as it is thought to yield more accurate, more reproducible, and higher coverage proteomic data (Barkovits et al., 2020), though this point is debated (Fernández-Costa et al., 2020). DIA has, at the time of writing, not yet been applied to honey bees, and the approach has unique database considerations if a spectral library is used (Pino et al., 2020). The sample preparation methods covered here can be used for both DDA and DIA, but downstream data processing may differ. This is a technique to watch as it becomes more popular and widespread.

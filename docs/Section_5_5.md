@@ -1,0 +1,9 @@
+# 5. Epigenomics
+
+## 5.5. Applications and limitations
+
+Honey bees have long been studied as a model system for epigenetics in insects. Tools for epigenetic analyses have enabled research of epigenetic mechanisms underlying the complex behaviors, development, gene regulation, diseases, ecology, and health of honey bees (Galbraith et al., 2015; Grozinger & Robinson, 2015; Grozinger & Zayed, 2020; Kucharski et al., 2008; Li-Byarlay et al., 2020, 2013). Specifially, 5mC DNA methylation is involved in caste determination and behavioral maturation, which are essential for regular colony functioning (Herb et al., 2012). Furthermore, m6A modifications have been linked to behavior, learning, and memory (Bataglia et al., 2021; Wang & Li-Byarlay, 2015). However, research on m6A modifications in honey bees is still in its early stages, and further studies are needed to elucidate the specific role of m6A in regulating gene expression and splicing in this model organism.
+
+Many studies also show that these epigenetic changes are tissue-specific or change over time (Li-Byarlay et al., 2020); therefore, genes with differential methylation patterns could be used in the future as biomarkers for environmental stress. In human cancer studies, for example, DNA methylation can be used to assist with diagnosis (Shames et al., 2007).
+
+However, the study of epigenetics and epigenomics can be complicated by tissue-specific effects and temporal dynamics during different developmental stages of organisms (Li-Byarlay et al., 2020). Future research using multi-omic approaches that combine epigenomics with transcriptomics, genomics, and other ‘omic tools may provide more comparative data. Until then, great care should be taken to control the age or developmental stage of samples used in these studies.

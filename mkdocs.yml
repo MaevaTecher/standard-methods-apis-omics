@@ -34,25 +34,65 @@ nav:
       - "Why a wikiCOLOSS?": about.md
       - "Meet the team": theteam.md
       - "Chapter Layout": chapt_layout.md
-  - "1. The omics revolution in Apis: more data than meets the eye" : Part_1.md
-  - "2. Sample management" : Part_2.md
+  - "1. The omics revolution in Apis: more data than meets the eye" : Section_1.md
+  - "2. Sample management" : Section_2.md
   - "3. Genome sequencing" :
-      - "3.1. Introduction": Part_3_1.md
-      - "3.1. Genome sequencing technologies": Part_3_2.md
-      - "3.3. The reference genome": Part_3_3.md
-      - "3.4. Small and large variant detection": Part_3_4.md
-      - "3.5. Sequencing museum specimens": Part_3_5.md
+      - "3.1. Introduction": Section_3_1.md
+      - "3.1. Genome sequencing technologies": Section_3_2.md
+      - "3.3. The reference genome": Section_3_3.md
+      - "3.4. Small and large variant detection": Section_3_4.md
+      - "3.5. Sequencing museum specimens": Section_3_5.md
   - "4. Whole-genome population and association studies" :
-      - "4.1. Introduction": Part_4_1.md
-      - "4.2. Ploidy and sampling considerations": Part_4_2.md
-      - "4.3. SNP and indel detection": Part_4_3.md
-      - "4.4. Comparing whole genomes": Part_4_4.md
-      - "4.5. Genome-wide association studies": Part_4_5.md
-      - "4.6. Population genomics: Experimental design": Part_4_6.md
-      - "4.7. Population genomics: Filtering and summary statistics using PLINK": Part_4_7.md
-      - "4.8. Population genomics: Inferring population structure using ADMIXTURE": Part_4_8.md
-      - "4.9. Landscape genomics: An example using LFMM": Part_4_9.md
-      - "4.10. Applying population genomics to conservation: Reduced SNP analysis": Part_4_10.md
+      - "4.1. Introduction": Section_4_1.md
+      - "4.2. Ploidy and sampling considerations": Section_4_2.md
+      - "4.3. SNP and indel detection": Section_4_3.md
+      - "4.4. Comparing whole genomes": Section_4_4.md
+      - "4.5. Genome-wide association studies": Section_4_5.md
+      - "4.6. Population genomics: Experimental design": Section_4_6.md
+      - "4.7. Population genomics: Filtering and summary statistics using PLINK": Section_4_7.md
+      - "4.8. Population genomics: Inferring population structure using ADMIXTURE": Section_4_8.md
+      - "4.9. Landscape genomics: An example using LFMM": Section_4_9.md
+      - "4.10. Applying population genomics to conservation: Reduced SNP analysis": Section_4_10.md
+  - "5. Epigenomics" :
+      - "5.1. Introduction": Section_5_1.md
+      - "5.2. DNA methylation": Section_5_2.md
+      - "5.3. Epitranscriptomics: RNA methylation of m6A": Section_5_3.md
+      - "5.4. Chromatin organization and histone modifications": Section_5_4.md
+      - "5.5. Applications and limitations": Section_5_5.md
+  - "6. Transcriptomics" :
+      - "6.1. Introduction": Section_6_1.md
+      - "6.2. Sequencing technologies": Section_6_2.md
+      - "6.3. Single-cell transcriptomics": Section_6_3.md
+      - "6.4. Data handling and analysis": Section_6_4.md
+      - "6.5. Applications and limitations": Section_6_5.md
+  - "7. Functional genomics and xenobiotic treatment" :
+      - "7.1. Introduction": Section_7_1.md
+      - "7.2. CRISPR": Section_7_2.md
+      - "7.3. RNA interference": Section_7_3.md
+      - "7.4. Xenobiotic treatment": Section_7_4.md
+      - "7.5. Applications and limitations": Section_7_5.md
+  - "8. Proteomics" :
+      - "8.1. Introduction": Section_8_1.md
+      - "8.2. Standard methods for shot-gun proteomics sample preparation": Section_8_2.md
+      - "8.3. Liquid chromatography and mass spectrometry": Section_8_3.md
+      - "8.4. Proteomics data processing": Section_8_4.md
+      - "8.5. Applications and limitations": Section_8_5.md
+  - "9. Metabolomics" :
+      - "9.1. Introduction": Section_9_1.md
+      - "9.2. Sample preparation for metabolomics": Section_9_2.md
+      - "9.3. Chromatography and mass spectrometry": Section_9_3.md
+      - "9.4. Metabolomics data processing": Section_9_4.md
+      - "9.5. Metabolomics applications and limitations": Section_9_5.md
+  - "10. Microbiome analysis" :
+      - "10.1. Introduction": Section_10_1.md
+      - "10.2. Sampling and DNA extraction": Section_10_2.md
+      - "10.3. Amplicon sequencing": Section_10_3.md
+      - "10.4. Microbiome data analysis": Section_10_4.md
+      - "10.5. Applications and limitations": Section_10_5.md
+  - "11. Data management and open access sharing" :
+      - "11.1. Metadata standardization": Section_11_1.md
+      - "11.2. Sharing pipelines and scripts": Section_11_2.md
+  - "12. The future of Apis omics: Biological integration" : Section_12.md
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
