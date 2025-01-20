@@ -7,8 +7,14 @@ This online resource is part of the chapter **“Standard Methods and Good Pract
 
 Developed collaboratively by **16 honey bee experts**, this resource combines expertise to provide researchers with standardized methods and best practices for *Apis* omics studies. Learn more about the contributors in the **[Meet the Team](https://maevatecher.github.io/standard-methods-apis-omics/theteam/)** section.
 
-### **Navigation**
-Easily explore this resource using the **Table of Contents** on the left-hand side to find specific sections and tutorials.
+### **Online Access**
+The resource is available online at:  
+**[maevatecher.github.io/standard-methods-apis-omics/](https://maevatecher.github.io/standard-methods-apis-omics/)**
+
+Features include:
+- **Navigation**: Easily explore this resource using the **Table of Contents** on the left-hand side to find specific sections and tutorials.
+- **Search Functionality**: Quickly find what you're looking for by searching directly for keywords.
+- - **Light and Night Mode**: Switch between light and night themes using the toggle in the top-right corner.  
 
 ---
 
