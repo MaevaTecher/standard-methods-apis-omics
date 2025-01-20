@@ -52,7 +52,7 @@ There are several strategies to study DNA methylation marks, including 1) whole 
 
 11. Sequence the DNA on your preferred sequencing platform following the manufacturer’s guidelines.
 
-12. Check the sequencing data for quality control (QC), processed to align read to the most updated *Apis mellifera* genome (see [Section 5.2.4]). Several key QC measures to consider include the sequence quality, mapping efficiency as general sequencing process, coverage, and the bisulfite conversion efficiency. The coverage of each base should be at least 20x, and ideally higher.
+12. Check the sequencing data for quality control (QC), processed to align read to the most updated *Apis mellifera* genome (see [Section 5.2.4](https://maevatecher.github.io/standard-methods-apis-omics/Section_5_2/)). Several key QC measures to consider include the sequence quality, mapping efficiency as general sequencing process, coverage, and the bisulfite conversion efficiency. The coverage of each base should be at least 20x, and ideally higher.
 
 ```         
 **TIP:** If there is a high duplicate rate, it can indicate issues with library preparation or sequencing. It is generally recommended to have a duplication rate of less than 10%. It is also important to check the efficiency of bisulfite conversion, which can be done by comparing the proportion of C to T transitions in the WGBS data with the proportion of C to T transitions in the input DNA.
@@ -116,7 +116,7 @@ Once the methylation levels have been called, the next step is to perform downst
 
 #### 5.2.3.2. Data repository
 
-Like all sequencing data, DNA methylation or RNA methylation data should be deposited in a public database. For example, NCBI Sequence Read Archive (SRA) data portal is a public database for scientists to deposit their raw sequencing data (see [Section 11]).
+Like all sequencing data, DNA methylation or RNA methylation data should be deposited in a public database. For example, NCBI Sequence Read Archive (SRA) data portal is a public database for scientists to deposit their raw sequencing data (see [Section 11](https://maevatecher.github.io/standard-methods-apis-omics/Section_11_1/)).
 
 #### 5.2.3.3. Statistical analysis
 

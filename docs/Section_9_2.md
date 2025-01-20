@@ -4,7 +4,7 @@
 
 ### 9.2.1. Considerations
 
-#### 9.2.1.1 General
+#### 9.2.1.1. General
 
 -   Metabolomics experiments may be either focused on discovery (untargeted analysis; e.g. discovery of metabolome changes in response to stimuli) or monitoring changes in or presence of an *a priori* defined set of compounds (targeted analysis). This protocol may need to be adjusted if the analytes of interest are better extracted in another solvent or better separated with another LC gradient.
 
@@ -22,7 +22,7 @@
 
 -   Store samples at -80 °C
 
--   Sample processing is somewhat dependent on the type of metabolite to be extracted and identified. Generally, methanol:water extractions work well, but the extraction solvent may need to be adjusted to best capture specific classes of compounds (see Section 9.1).
+-   Sample processing is somewhat dependent on the type of metabolite to be extracted and identified. Generally, methanol:water extractions work well, but the extraction solvent may need to be adjusted to best capture specific classes of compounds (see [Section 9.1](https://maevatecher.github.io/standard-methods-apis-omics/Section_9_1/)).
 
 -   The step at which an internal standard is added may vary. Adding the standard before homogenization accounts for variation in extraction efficiency, while adding the standard immediately ahead of injection will ensure the same amount is present in each sample. If desired, two sets of internal standards may be added at different points in the sample processing protocol.
 
@@ -40,7 +40,7 @@
 
 ### 9.2.2. Materials
 
--   Large equipment: homogenizer or bead beater, centrifuge, speed vacuum concentrator, -80 °C and -20 °C freezers, a vortex, and liquid chromatography system coupled to a mass spectrometer (for example, a high-resolution system such as a Nexera LC30 UPLC (Shimadzu) coupled to a quadrupole-time-of-flight mass spectrometer (TripleTOF 5600, AB SCIEX), but see [Section 9.3]{.underline})
+-   Large equipment: homogenizer or bead beater, centrifuge, speed vacuum concentrator, -80 °C and -20 °C freezers, a vortex, and liquid chromatography system coupled to a mass spectrometer (for example, a high-resolution system such as a Nexera LC30 UPLC (Shimadzu) coupled to a quadrupole-time-of-flight mass spectrometer (TripleTOF 5600, AB SCIEX), but see [Section 9.3](https://maevatecher.github.io/standard-methods-apis-omics/Section_9_3/))
 
 -   In-house library of metabolites (such as the IROA Mass Spectrometry Metabolite Library of Standards)
 

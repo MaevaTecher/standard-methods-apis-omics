@@ -54,7 +54,7 @@
 
 3.  Dissect each tissue sample with a new, sterile microdissection tool to avoid cross-contamination. See Carreck *et al.* (2013) for guidance on dissecting specific tissues.
 
-4.  Place the tissue sample in a homogenization tube and proceed to lysis ([Section 10.2.2.3]{.underline}.). **TIP:** If you are only interested in the bacterial fraction, a lysozyme treatment for bacterial cell wall lysis before DNA extraction may also be a good lysis option.
+4.  Place the tissue sample in a homogenization tube and proceed to lysis ([Section 10.2.2.3](https://maevatecher.github.io/standard-methods-apis-omics/Section_10_2/)). **TIP:** If you are only interested in the bacterial fraction, a lysozyme treatment for bacterial cell wall lysis before DNA extraction may also be a good lysis option.
 
 #### 10.2.2.3. DNA extraction methods
 

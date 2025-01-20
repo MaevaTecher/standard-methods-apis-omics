@@ -22,7 +22,9 @@ The approach takes a cell suspension of the tissue of interest, separates cells 
 
 -   Pipette and tips
 
--   Kits: Chromium Chip G Single Cell Kit (*10x Genomics*), Chromium Next GEM Single Cell 3’ Kit (*10x Genomics*) ● RNAse-free 1X PBS
+-   Kits: Chromium Chip G Single Cell Kit (*10x Genomics*), Chromium Next GEM Single Cell 3’ Kit (*10x Genomics*)
+
+-   RNAse-free 1X PBS
 
 -   1.5 ml microfuge tubes (nuclease-free)
 
@@ -42,7 +44,7 @@ The approach takes a cell suspension of the tissue of interest, separates cells 
 
 -   0.4% trypan blue
 
-● C-Chip disposable hemocytometer and a Compound microscope or a cellometer
+-   C-Chip disposable hemocytometer and a Compound microscope or a cellometer
 
 ### 6.3.3. Sample preparation procedure for single-cell sequencing
 

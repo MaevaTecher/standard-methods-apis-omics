@@ -38,7 +38,7 @@ nav:
   - "2. Sample management" : Section_2.md
   - "3. Genome sequencing" :
       - "3.1. Introduction": Section_3_1.md
-      - "3.1. Genome sequencing technologies": Section_3_2.md
+      - "3.2. Genome sequencing technologies": Section_3_2.md
       - "3.3. The reference genome": Section_3_3.md
       - "3.4. Small and large variant detection": Section_3_4.md
       - "3.5. Sequencing museum specimens": Section_3_5.md

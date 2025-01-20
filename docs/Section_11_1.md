@@ -12,6 +12,12 @@ In addition to the global databases mentioned earlier, several functional geneti
 
 While peer-reviewed journals require that any genetic data are shared in open-access, no rigorous quality control of the metadata submitted is ensured. Regardless of the reader's expertise level in submitting genomic data, we recommend following the best practices listed by the journal *Scientific Data* (“Promoting best practice in nucleotide sequence data sharing,” 2020) in submitting metadata to NCBI, DDBJ, ENA, and other databases. This section does not intend to replace the multiple and comprehensive resources available guiding data and metadata submission, and we urge to carefully adhering to these standards (*i.e*., for [NCBI BioProject](https://www.ncbi.nlm.nih.gov/books/NBK54015/?report=reader)).
 
+### 11.1.1. Common problems with *Apis*-related BioProjects
+
+Often, a single study can be associated with a BioProject (*i.e.*, BioProject 1 = X individuals SNPs data, BioProject 2 = Y Transcriptomes) or eventually an umbrella project gathering several related projects (*i.e.*, BioProject UMBRELLA [BioProject 3 = Proteomics data for 100 individuals + and BioProject 2 = Gene expression data for 50 individuals]). One common mistake is the absence of a clear, unique title and description.
+
+Among the 517 BioProjects strictly related to *Apis* honey bee available on NCBI, we found that most did not have associated publications or proper descriptions (Search: "Apis mellifera"[Organism] and manual sorting). This can make it difficult for the reader to know 1) how the data were generated and 2) which institute or team could be contacted to reach out on the origin of the data. Thus, we suggest that researchers follow the subsequent best practices for BioProject submission:11.1.2. Common problems with *Apis*-related BioSamples
+
 ------------------------------------------------------------------------
 
 **Best practices for BioProjects:**
@@ -28,17 +34,13 @@ While peer-reviewed journals require that any genetic data are shared in open-ac
 
 ------------------------------------------------------------------------
 
-### 11.1.1. Common problems with *Apis*-related BioProjects
+### 11.1.1. Common problems with *Apis*-related BioSamples
 
-Often, a single study can be associated with a BioProject (*i.e.*, BioProject 1 = X individuals SNPs data, BioProject 2 = Y Transcriptomes) or eventually an umbrella project gathering several related projects (*i.e.*, BioProject UMBRELLA [BioProject 3 = Proteomics data for 100 individuals + and BioProject 2 = Gene expression data for 50 individuals]). One common mistake is the absence of a clear, unique title and description.
-
-Among the 517 BioProjects strictly related to *Apis* honey bee available on NCBI, we found that most did not have associated publications or proper descriptions (Search: "Apis mellifera"[Organism] and manual sorting). This can make it difficult for the reader to know 1) how the data were generated and 2) which institute or team could be contacted to reach out on the origin of the data. Thus, we suggest that researchers follow the subsequent best practices for BioProject submission:11.1.2. Common problems with *Apis*-related BioSamples
-
-From our survey, most of the inconsistency and variability observed in metadata submitted for *Apis* honey bee projects was observed in BioSample (which contains important metadata regarding the source of the sample). A BioSample is essential for cross-scale comparative studies and data mining. Several studies in *A. mellifera* population genetics (see [Section 4.6](https://youneedawiki.com/app/page/1fxIeldyfxt7QFifxFVInw70CVtIGjBVYCzmer3VOPvY?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2)) have generated new genome-wide data but also compared with former studies from a different source in their analysis (Cridland et al., 2017; Dogantzis et al., 2021; P. Shi et al., 2020; Tihelka et al., 2020). Such integrative studies are predicted to increase in the future as they give a broader and global perspective on honey bee evolution and biology.
+From our survey, most of the inconsistency and variability observed in metadata submitted for *Apis* honey bee projects was observed in BioSample (which contains important metadata regarding the source of the sample). A BioSample is essential for cross-scale comparative studies and data mining. Several studies in *A. mellifera* population genetics (see [Section 4.6](https://maevatecher.github.io/standard-methods-apis-omics/Section_4_6/)) have generated new genome-wide data but also compared with former studies from a different source in their analysis (Cridland et al., 2017; Dogantzis et al., 2021; P. Shi et al., 2020; Tihelka et al., 2020). Such integrative studies are predicted to increase in the future as they give a broader and global perspective on honey bee evolution and biology.
 
 We found that 16,855 BioSamples related to honey bees and *Apis*-associated environmental organisms (except *Acari* mites and hive insect pests) were registered in public databases. Among them only 60% had attribute fields about the specimen’s sex, and 53% had geographic location details. Aside from incomplete data, in our survey we encountered problems related to variable orthograph even with fields as straight-forward as ‘sex’ attribute (Table 1). While the absence of such data can be understandable and common with historical or third-party sampling, we urge future submissions to include at least the following details for *Apis* standard research.
 
-Table 1. Survey results of BioSample attributes. 
+Table 1. Survey results of BioSample attributes.
 
 |                                 |               |
 |---------------------------------|---------------|

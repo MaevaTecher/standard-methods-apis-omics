@@ -2,7 +2,7 @@
 
 ## 9.3. Chromatography and mass spectrometry
 
-Similar to proteomics (see [Section 8](https://youneedawiki.com/app/page/1b7KWanMG0j9WZf8sPiuy0Uex-05x-YWG?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2)), there are numerous options for chromatography and mass spectrometer instruments and acquisition methods. Additional considerations for chromatography and mass spectrometry are as follows:
+Similar to proteomics (see [Section 8](https://maevatecher.github.io/standard-methods-apis-omics/Section_8_1/)), there are numerous options for chromatography and mass spectrometer instruments and acquisition methods. Additional considerations for chromatography and mass spectrometry are as follows:
 
 1.  The methods described here have been used successfully with a Nexera LC30 UPLC (Shimadzu), coupled to a quadrupole-time-of-flight mass spectrometer (ABSCIEX TripleTOF 5600); however, other combinations are possible. High-resolution mass spectrometers require occasional calibration. Time of flight mass spectrometers (TOFs), for example, require calibration every 2 to 3 hours to retain < 3 ppm mass accuracy.
 

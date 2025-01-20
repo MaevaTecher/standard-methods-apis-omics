@@ -14,7 +14,7 @@ Constructs can be designed manually or utilizing a web-based tool. Several such 
 
 ### 7.2.1. Considerations
 
--   Both Cas9 protein and sgRNA can either be purchased from vendors or expressed and purified in-house. The following protocol is for in-house expression. If purchasing components from vendors, skip to [Section 7.2.1.3]{.underline}.
+-   Both Cas9 protein and sgRNA can either be purchased from vendors or expressed and purified in-house. The following protocol is for in-house expression. If purchasing components from vendors, skip to [Section 7.2.1.3](https://maevatecher.github.io/standard-methods-apis-omics/Section_7_2/).
 
 -   This protocol describes injecting the gene editing components into honey bee eggs, but injecting into non-embryonic tissues (*e.g.* adult brains) is also possible.
 

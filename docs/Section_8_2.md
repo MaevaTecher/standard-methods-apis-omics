@@ -36,7 +36,7 @@
 
 ### 8.2.2. Materials
 
--   Large equipment: sample homogenizer (*e.g.* Precellys 24), speed-vac, centrifuge, bath sonicator (optional), liquid chromatography system coupled to a mass spectrometer (see [Section 8.3](https://youneedawiki.com/app/page/1P7sIeW90jmj7uJZsREt6Nri6uJqZ_kMk7re0aR0YqRo?p=1rc183pyLOH9HstkT14kQP-SXKx-dffa2) for more details)
+-   Large equipment: sample homogenizer (*e.g.* Precellys 24), speed-vac, centrifuge, bath sonicator (optional), liquid chromatography system coupled to a mass spectrometer (see [Section 8.3](https://maevatecher.github.io/standard-methods-apis-omics/Section_8_3/) for more details)
 
 -   Homogenization tubes (*e.g.* 2 mL DuraTubes) and ceramic homogenization beads
 
