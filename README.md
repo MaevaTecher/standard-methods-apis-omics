@@ -1,6 +1,6 @@
 # Welcome to the **wikiCOLOSS BEEBOOK IV: Standard Methods and Good Practices for Apis Omics Research**
 
-![wikiCOLOSS](docs/assets/Manae_sketches-COLOSS.jpg)
+<img src="docs/assets/Manae_sketches-COLOSS.jpg" alt="wikiCOLOSS" style="width:50%;">
 
 This online resource is part of the chapter **“Standard Methods and Good Practices in Apis Honey Bee ‘Omics Research”** from the BEEBOOK Volume IV. It serves as a complementary online resource designed to evolve with advancements in molecular techniques, ensuring it stays up to date with cutting-edge methodologies.
 
