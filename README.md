@@ -1,5 +1,5 @@
-# **wikiCOLOSS BEEBOOK IV**
-## Standard Methods and Good Practices for Apis Omics Research
+# **Repository wikiCOLOSS BEEBOOK IV**
+### *Standard Methods and Good Practices for Apis Omics Research*
 
 <img src="docs/assets/Manae_sketches-COLOSS.jpg" alt="wikiCOLOSS" style="width:50%;">
 
