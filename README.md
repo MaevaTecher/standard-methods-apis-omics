@@ -23,6 +23,8 @@ If you use the methods and tutorials provided here, please cite as follows:
 
 > **Techer et al.**, *Standard Methods and Good Practices in Apis Honey Bee Omics Research*, Journal of Apicultural Research (TJAR), **(in press)**.
 
+Repository DOI: 10.5281/zenodo.14695367
 ---
 
 Thank you for contributing to and using this dynamic resource to advance honey bee omics research!
+
