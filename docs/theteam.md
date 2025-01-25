@@ -157,7 +157,7 @@ GenPhySE, Université de Toulouse, INRAE, INPT, INP-ENVT, 31326 Castanet Tolosan
 
 Alain obtained his PhD in molecular biology from Orsay University (France) in 1991. His first expertise was on sequencing genes coding for human blood groups and building genetic maps for locating markers linked to monogenic diseases. He now works at INRAE in Toulouse, France, where he first worked on QTL mapping in chickens and was subsequently involved in the consortiums for the assembly of reference genomes of several poultry species. First the chicken in 2004 (Sanger sequencing) and helping with updates until 2017, then the mallard duck, Muskovy duck, quail, and guinea fowl. With the establishment of short-read parallel sequencing and long-read sequencing as new standards, population genomics at the genome scale became possible, which he did in guinea fowl and now in honey bees. His main focus is to better understand the genetic diversity and admixture in European honey bee populations and to deepen our understanding of the honey bee genome structure.
 
-![Iratxe Zarraonaindia](assets/Iraxte.jpg)
+![Iratxe Zarraonaindia](assets/Iraxte.png)
 ## Iratxe Zarraonaindia
 
 Department of Genetics, Physical Anthropology and Animal Physiology, Applied Genomics and Bioinformatics lab., University of the Basque Country (UPV/EHU), Leioa, Spain IKERBASQUE, Basque Foundation for Science, Bilbao, Spain
