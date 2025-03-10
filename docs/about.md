@@ -57,8 +57,6 @@ innovative studies taking advantage of large and complex datasets.
 The methods and tutorials described here are still part of the chapter
 “Standard Methods and Good Practices in *Apis* Honey Bee ‘Omics Research”
 in BEEBOOK Volume IV. If these resources are useful for you, please cite
-our work: “Techer et al., Standard methods and good practices in *Apis*
-honey bee omics research, Journal of Apicultural Research TJAR (in
-press)"
+our work: “Techer, M.A., Chakrabarti, P., Caesar, L., Eynard, S.E., Farrell, M.C., Foster, L.J., Gorrochategui-Ortega, J., Henriques, D., Li-Byarlay, H., Morre, J.T., Newton, I.L.G., Parejo, M., Pinto, M.A., Vignal, A., Zarraonaindia, I., McAfee, A. (2025) Standard methods and good practices in Apis honey bee ‘omics research. In P. Chantawannakul, J.D. Evans, P. Neumann, N. L. Carreck, J. D. Ellis & V. Dietemann (Eds.), The COLOSS BEEBOOK, Volume IV: Standard methods for Apis cerana research and Apis ‘omics. Journal of Apicultural Research, 64(2)."
 
 ------------------------------------------------------------------------
