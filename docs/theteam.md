@@ -33,7 +33,7 @@ Lílian earned her PhD at the Universidade Federal do Rio Grande do Sul, Brazil.
 ![Sonia E. Eynard](assets/Sonia.jpg)
 ## Sonia E. Eynard
 
-GenPhySE, Université de Toulouse, INRAE, INPT, INP-ENVT, 31326 Castanet Tolosan, France Labogena DNA, 78353 Jouy-en-Josas, France
+GenPhySE, Université de Toulouse, INRAE, ENVT, 31326, Castanet Tolosan, France
 
 ### Expertise: Population genomics, quantitative genetics, livestock species, *Apis mellifera* 
 
@@ -69,9 +69,7 @@ June is a PhD student at the Applied Genomics and Bioinformatics group, at the D
 ![Dora Henriques](assets/Dora.jpg)
 ## Dora Henriques
 
-Centro de Investigação de Montanha, Instituto Politécnico de Bragança, Campus de Santa Apolónia, 5300-253, Bragança, Portugal
-
-Laboratório Associado para a Sustentabilidade e Tecnologia em Regiões de Montanha (SusTEC), Instituto Politécnico de Bragança, Campus de Santa Apolónia, 5300-253 Bragança, Portugal
+CIMO, LA SusTEC, Instituto Politécnico de Bragança, Campus de Santa Apolónia, 5300-253 Bragança, Portugal.
 
 ### Expertise: Population genomics, bioinformatics, conservation genomics, *Apis mellifera* 
 
@@ -127,9 +125,7 @@ Melanie has a life science background, holding a master's degree in Ecology and 
 ![M. Alice Pinto](assets/Alice.jpg)
 ## M. Alice Pinto
 
-Centro de Investigação de Montanha, Instituto Politécnico de Bragança, Campus de Santa Apolónia, 5300-253, Bragança, Portugal
-
-Laboratório Associado para a Sustentabilidade e Tecnologia em Regiões de Montanha (SusTEC), Instituto Politécnico de Bragança, Campus de Santa Apolónia, 5300-253 Bragança, Portugal
+CIMO, LA SusTEC, Instituto Politécnico de Bragança, Campus de Santa Apolónia, 5300-253 Bragança, Portugal.
 
 ### Expertise: Population genomics, *Apis mellifera* 
 
@@ -151,7 +147,7 @@ Maeva joined the Behavioral Plasticity Research Institute as a Postdoctoral Rese
 ![Alain Vignal](assets/Alain.jpg)
 ## Alain Vignal
 
-GenPhySE, Université de Toulouse, INRAE, INPT, INP-ENVT, 31326 Castanet Tolosan, France
+GenPhySE, Université de Toulouse, INRAE, ENVT, 31326, Castanet Tolosan, France
 
 ### Expertise: Population and comparative genomics, QTL mapping, poultry, *Apis mellifera* 
 
