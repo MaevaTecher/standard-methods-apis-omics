@@ -1,0 +1,2228 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Section_4_8/">
+      
+      
+        <link rel="next" href="../Section_4_10/">
+      
+      
+      <link rel="icon" href="../assets/Coloss-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>4.9. Landscape genomics: An example using LFMM - wikiCOLOSS: Standard Methods for Apis Omics Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="yellow" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-whole-genome-population-and-association-studies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="wikiCOLOSS: Standard Methods for Apis Omics Research" class="md-header__button md-logo" aria-label="wikiCOLOSS: Standard Methods for Apis Omics Research" data-md-component="logo">
+      
+  <img src="../assets/Coloss-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            wikiCOLOSS: Standard Methods for Apis Omics Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4.9. Landscape genomics: An example using LFMM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="yellow" data-md-color-accent="teal"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="blue"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="wikiCOLOSS: Standard Methods for Apis Omics Research" class="md-nav__button md-logo" aria-label="wikiCOLOSS: Standard Methods for Apis Omics Research" data-md-component="logo">
+      
+  <img src="../assets/Coloss-logo.png" alt="logo">
+
+    </a>
+    wikiCOLOSS: Standard Methods for Apis Omics Research
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why a wikiCOLOSS?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theteam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meet the team
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapt_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. The omics revolution in Apis: more data than meets the eye
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Sample management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. Genome sequencing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            3. Genome sequencing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2. Genome sequencing technologies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3. The reference genome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.4. Small and large variant detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.5. Sequencing museum specimens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4. Whole-genome population and association studies
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            4. Whole-genome population and association studies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2. Ploidy and sampling considerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3. SNP and indel detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4. Comparing whole genomes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.5. Genome-wide association studies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.6. Population genomics: Experimental design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.7. Population genomics: Filtering and summary statistics using PLINK
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.8. Population genomics: Inferring population structure using ADMIXTURE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.9. Landscape genomics: An example using LFMM
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4.9. Landscape genomics: An example using LFMM
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#49-landscape-genomics-an-example-using-lfmm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9. Landscape genomics: An example using LFMM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9. Landscape genomics: An example using LFMM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#491-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.1. Materials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#492-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.2. Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9.2. Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figure-12-correlation-circles-with-a-36-variables-and-b-8-variables-after-removing-the-highly-correlated-variables-r-080" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure 12. Correlation circles with A) 36 variables and B) 8 variables, after removing the highly correlated variables (|r| > 0.80).
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.10. Applying population genomics to conservation: Reduced SNP analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    5. Epigenomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            5. Epigenomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.2. DNA methylation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.3. Epitranscriptomics: RNA methylation of m6A
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.4. Chromatin organization and histone modifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    6. Transcriptomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            6. Transcriptomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2. Sequencing technologies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.3. Single-cell transcriptomics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.4. Data handling and analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    7. Functional genomics and xenobiotic treatment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            7. Functional genomics and xenobiotic treatment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2. CRISPR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.3. RNA interference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4. Xenobiotic treatment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    8. Proteomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            8. Proteomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.2. Standard methods for shot-gun proteomics sample preparation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.3. Liquid chromatography and mass spectrometry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.4. Proteomics data processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    9. Metabolomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            9. Metabolomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.2. Sample preparation for metabolomics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.3. Chromatography and mass spectrometry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.4. Metabolomics data processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.5. Metabolomics applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    10. Microbiome analysis
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            10. Microbiome analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.2. Sampling and DNA extraction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.3. Amplicon sequencing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.4. Microbiome data analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    11. Data management and open access sharing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            11. Data management and open access sharing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_11_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.1. Metadata standardization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_11_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.2. Sharing pipelines and scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. The future of Apis omics: Biological integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#49-landscape-genomics-an-example-using-lfmm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9. Landscape genomics: An example using LFMM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9. Landscape genomics: An example using LFMM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#491-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.1. Materials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#492-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9.2. Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9.2. Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figure-12-correlation-circles-with-a-36-variables-and-b-8-variables-after-removing-the-highly-correlated-variables-r-080" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure 12. Correlation circles with A) 36 variables and B) 8 variables, after removing the highly correlated variables (|r| > 0.80).
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4-whole-genome-population-and-association-studies">4. Whole-genome population and association studies</h1>
+<h2 id="49-landscape-genomics-an-example-using-lfmm">4.9. Landscape genomics: An example using <strong>LFMM</strong></h2>
+<p>Landscape genomics, which addresses how local environmental conditions influence the distribution of genetic variation (Manel et al., 2003), is an increasingly important field. To identify associations between environmental variables and genomic variation, various approaches known as genotype-environment association (GEA) or environmental association analysis (EAA) have been developed. Examples of GEA-based software are <strong>Bayenv2</strong> (Günther &amp; Coop, 2013), <strong>LFMM</strong> (Frichot et al., 2013), and <strong>Samβada</strong> (Stucki et al., 2017).</p>
+<p>When compared to F~ST~-based methods, GEA methods can potentially identify selective pressures driving local adaptation. Besides, the combined analysis of genetic data and environmental data increases the power to detect loci that may be under selection (De Mita et al., 2013; de Villemereuil et al., 2014; Rellstab et al., 2015). However, each GEA method has advantages and disadvantages (see (Rellstab et al., 2015)) for further details), and combining different approaches helps reduce uncertainty of the results. Here, we will describe how to use the latent factor mixed model approach (<strong>LFMM</strong>).</p>
+<p><strong>LFMM</strong> is available in a command line version (1.5), and it can be downloaded from <a href="https://bcm-uga.github.io/lfmm/index.html.">https://bcm-uga.github.io/lfmm/index.html.</a> The latest version (2.0) is also available in an <strong>R</strong> package called <strong>lfmm</strong>. This tool models the effect of population structure using latent factors; therefore, population structure should be previously investigated. Here, the results obtained in the <a href="https://maevatecher.github.io/standard-methods-apis-omics/Part_4_8/">Section 4.8</a> will be integrated in this example.</p>
+<h3 id="491-materials">4.9.1. Materials</h3>
+<p>To run <strong>LFMM</strong>, two datasets will be required:</p>
+<ul>
+<li>
+<p>Genomic dataset: The <em>PLINK 1 binary</em> file obtained in <a href="https://maevatecher.github.io/standard-methods-apis-omics/Part_4_7/">Section 4.7</a>, called <em>pop_gen_MD_maf005.</em></p>
+</li>
+<li>
+<p>Environmental variables dataset: A file called <em>ex_env.csv</em>, containing 36 variables for each individual.</p>
+</li>
+</ul>
+<p>To have the environmental variable dataset the geographical coordinates of each apiary are needed. These coordinates are then used to obtain environmental variables from publicly available databases such as WorldClim, Climatic Research Unit, and OPENEI. A function within the <strong>R.SamBada</strong> package, (Duruz et al., 2019) called <em>createEnv</em>, can help in this process (<strong>R.SamBada</strong> documentation can be found at <a href="https://cran.r-project.org/web/packages/R.SamBada/R.SamBada.pdf">https://cran.r-project.org/web/packages/R.SamBada/R.SamBada.pdf).</a>.)</p>
+<h3 id="492-methods">4.9.2. Methods</h3>
+<p>To prevent problems caused by non-independency of environmental variables, first, it is important to determine if they are correlated with each other. To do that, the <strong>R</strong> packages <strong>ade4</strong> (Thioulouse et al., 2018) for PCA computation, and <strong>factoextra</strong> (Kassambara &amp; Mundt, 2017) for PCA visualization, will be needed. The following steps are pursued in <strong>R</strong> code:</p>
+<p><strong>Step 1.</strong> Install and open the <strong>R</strong> libraries:</p>
+<pre><code class="language-r">install.packages(&quot;ade4&quot;) #PCA computation
+install.packages(&quot;factoextra&quot;) #PCA visualization
+library(ade4)
+library(factoextra)
+</code></pre>
+<p><strong>Step 2.</strong> Read the file with environmental variables:</p>
+<pre><code class="language-r">ex_env &lt;- read.table(&quot;ex_env.csv&quot;, 
+header = TRUE, #The file contains a header
+row.names=1, #Row names are in the first column
+sep = &quot;;&quot;)
+</code></pre>
+<p><strong>Step 3.</strong> Perform a PCA with the environmental variables:</p>
+<pre><code class="language-r">ex_env.pca&lt;- dudi.pca(ex_env ,
+scannf = FALSE, #Hide screen plot
+nf = 5) #Number of components kept in the results
+</code></pre>
+<p><strong>Step 4.</strong> Make a correlation circle</p>
+<pre><code class="language-r">s.corcircle(ex_env.pca$co)
+</code></pre>
+<p>A correlation circle similar to that of Figure 12A will be obtained. Here, the direction and the length of arrows indicate the correlation between the variables as well as between variables and principal components. For instance, in Figure 12A, the variables AUTU_TMP and TMN_ANNUAL have the same direction, the same length and are very close to each other, which indicates that they are highly correlated. Indeed, the correlation value (r^2^, calculated in the next step) is 0.99. On the other hand, the variables pointing to opposite sides of the graphs, for instance SUM_TMX and AUTO_CLD, are negatively correlated (r^2^ = -0.80).</p>
+<p><strong>Step 5.</strong> Calculate a correlation matrix using the following commands:</p>
+<pre><code class="language-r">cor_matrix=cor(ex_env, method='pearson') #To calculate the correlation values
+write.csv(cor_matrix, file = &quot;cor_matrix.csv&quot;) #To save the matrix in a file
+</code></pre>
+<p>Following that, a file called <em>cor_matrix.csv</em> will be created. The values with |r| &gt; 0.80 should be deleted from the environmental dataset. After this, the same procedure described above (<strong>Steps 1 - 4</strong>) should be performed again to obtain a diagram similar to Figure 12B, to check that the represented variables (eight in total) are independent.</p>
+<p><img alt="Figure 12" src="../assets/Figure_12.png" /></p>
+<h6 id="figure-12-correlation-circles-with-a-36-variables-and-b-8-variables-after-removing-the-highly-correlated-variables-r-080">Figure 12. Correlation circles with A) 36 variables and B) 8 variables, after removing the highly correlated variables (|r| &gt; 0.80).</h6>
+<p>Now that the bioclimatic dataset is prepared, the genetic dataset needs to be handled. LFMM accepts its own format (.lfmm), and the software has a function to convert PED format to .lfmm.</p>
+<p><strong>Step 6.</strong> Convert the <em>pop_gen_MD_maf005</em> binary <em>PLINK 1 binary</em> file obtained in <a href="https://maevatecher.github.io/standard-methods-apis-omics/Part_4_7/">Section 4.7</a> to a <em>regular PLINK text</em> file.</p>
+<pre><code class="language-r">plink --bfile pop_gen_MD_maf005 --keep-allele-order --recode --out
+</code></pre>
+<p><strong>Step 7.</strong> Convert the PED file to .lfmm using the <strong>R</strong> function of <strong>LEA</strong>, ped2lfmm. The tutorial dataset contains 33 individuals and 2,365,431 SNPs. In order to efficiently upload this data into R, the <strong>data.table R</strong> package will be used.</p>
+<pre><code class="language-r"># To install LEA
+if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
+install.packages(&quot;BiocManager&quot;)
+BiocManager::install(&quot;LEA&quot;)
+
+#To download the package data.table
+install.packages(&quot;data.table&quot;) 
+
+#Loading the package lea
+library(LEA) 
+
+#Loading the package data.table
+library(&quot;data.table&quot;)
+
+#Convert ped format to lfmm
+output &lt;- ped2lfmm(&quot;pop_gen_MD_maf005.lfmm&quot;) 
+
+#Loading the ped file to R
+geno &lt;- fread(&quot;pop_gen_MD_maf005.ped&quot;, showProgress = FALSE) 
+</code></pre>
+<p>Note that, when the format PED is converted to the lfmm format, the names of the SNPs that were in the MAP file will be lost.</p>
+<p><strong>Step 8.</strong> Upload the eight independent environmental variables, but without the individuals’ names that are in the first column.</p>
+<pre><code class="language-r">#Load the reduced environmental file
+env &lt;- fread(&quot;ex_env_red.csv&quot;)
+
+#Select from column 2 to 9 
+env=env[,2:9]  
+</code></pre>
+<p><strong>Step 9.</strong> Perform the association analysis between the environmental variables and the genotypes. To that end, we need to run a function (lasso_lfmm) to estimate the latent factor mixed model parameters. The results of this function will be used by the function lfmm_test to calculate the significance of the associations.</p>
+<pre><code class="language-r">#To download the package lfmm
+install.packages(&quot;lfmm&quot;)
+
+#To load the package lfmm
+library(&quot;lfmm&quot;) 
+
+lfmmlasso &lt;- lfmm_lasso(Y = geno,#The genotypes matrix
+X = env, #The environmental matrix
+K = 2, #The best K calculated previously
+nozero.prop = 0.01)
+
+pv &lt;- lfmm_test(Y = geno, X = env,
+lfmm = lfmmlasso, #The results obtained previously
+calibrate = &quot;gif&quot;)
+</code></pre>
+<p><strong>Step 10.</strong> The variable pv is a list and contains different types of information, such as the p values and the calibrated p values for all eight environmental variables. If one wants to see the calibrated p values of the first loci the following command should be typed:</p>
+<pre><code class="language-r">head(pv$calibrated.pvalue)
+</code></pre>
+<p><strong>Step 11.</strong> This command will retrieve the first six calibrated p values for each one of the eight environmental variables. Each environmental variable is in a specific column. For instance, altitude is in the first column and SUM_PRE in the third column. If we want to see only the p-values of SUM_PRE, we just need to specify that this variable is in the third column, using the following command:</p>
+<pre><code class="language-r">head(pv$calibrated.pvalue[,3])
+</code></pre>
+<p><strong>Step 12.</strong> Select one environmental variable to continue with the procedure. The data obtained for SUM_PRE (third column) will be used. Here, the calibrated p values will be saved in the variable pvalues_pre_ver.</p>
+<pre><code class="language-r">pvalues_pre_ver &lt;- pv$calibrated.pvalue[,3] #SUM_PRE is the third column
+</code></pre>
+<p><strong>Step 13.</strong> Make a Manhattan plot coloring the SNPs with p value \&lt; 0.0001, which corresponds to -log10(p value) &gt; 4, in red and the others in grey.</p>
+<pre><code class="language-r">#The name of the image to be created
+jpeg(filename=&quot; Manhattan.jpeg&quot;)
+
+#Plot the -log10 of the calibrated P-values 
+plot(-log10(pvalues_pre_ver), pch = 19, #Each P-value is represented by a circle
+cex = .2, #To specify the size of the circle
+xlab = &quot;SNP&quot;, ylab = &quot;-Log P&quot;,#To label X and Y axis
+col = ifelse((-log10(pvalues_pre_ver)) &gt; 4,'red','grey')) #Values &gt;4 in red and the others in grey
+
+#To save the image in the working directory
+dev.off() 
+</code></pre>
+<p><strong>Step 14.</strong> Count the SNPs significantly associated with SUM_PRE (p value \&lt; 0.0001) and save the positions of the SNPs significantly associated with SUM_PRE in a variable called pvalue_00001_pos. In the tutorial example, there are a total of 1,215 SNPs with p value \&lt;0.0001.</p>
+<pre><code class="language-r">length(pvalues_pre_ver[pvalues_pre_ver&lt;0.0001])
+pvalue_00001_pos=which(pvalues_pre_ver&lt;0.0001) 
+</code></pre>
+<p><strong>Step 15.</strong> Create a file in the directory with the information contained in pvalue_00001_pos.</p>
+<pre><code class="language-r">write.table(pvalue_00001_pos,&quot;pvalues_00001.csv&quot;,row.names = FALSE, col.names=FALSE)
+</code></pre>
+<p><strong>Step 16.</strong> Get thegenomic coordinates from the file positions of the outlier SNPs. Use the <em>pop_gen_MD_maf005.map</em> coordinates and retrieve only the positions indicated in <em>pvalues_00001.csv</em>.</p>
+<p>To that end, the following steps can be performed:</p>
+<p>1. Create a file called <em>index2snp.sh.</em></p>
+<pre><code class="language-bash">nano index2snp.sh
+</code></pre>
+<p>2. Type the following code in the file and close it.</p>
+<pre><code class="language-bash">#!/bin/sh
+cat pvalues_00001.csv | while read line; do
+sed -n ${line}p pop_gen_MD_maf005.map &gt;&gt; pvalues_00001_snp_name
+done
+</code></pre>
+<p>3. Allow executing of the file.</p>
+<pre><code class="language-bash">chmod +x index2snp.sh
+</code></pre>
+<p>4. Run the file.</p>
+<pre><code class="language-bash">./index2snp.sh
+</code></pre>
+<p><strong>Step 17.</strong> Annotate theoutlier SNPs. To that end, the tool <strong>SnpEff</strong> (Cingolani et al., 2012) can be used in the Galaxy server. <strong>SnpEff</strong> accepts as input a VCF file. Thus, the first step is to build a VCF only with the outlier SNPs, which can be done in <strong>PLINK</strong>. To reduce the size of the VCF file, only one individual will be included in the tutorial example. The following steps are required to annotate the outlier SNP:</p>
+<p>1. Create a file with the Family and Individual ID that will be retained. In the example by writing “car ID1” in the file <em>one_ind</em>.</p>
+<pre><code class="language-bash">nano one_ind
+car ID1
+</code></pre>
+<p>2. Create a file with the SNPs list to be retained.</p>
+<pre><code class="language-bash">awk '{print $2}' pvalues_00001_snp_name &gt; outlier_snp
+</code></pre>
+<p>3. Create a VCF file.</p>
+<pre><code class="language-bash">plink --bfile pop_gen_MD_maf005 \
+--keep one_ind `# list of individuals to keep ` \
+--extract outlier_snp `# list of SNPs to keep` \
+--recode vcf --out outlier_snps
+</code></pre>
+<p>4. Go to <a href="https://usegalaxy.org/">Galaxy</a> and select the tool “SnpEff download” and write “Apis_mellifera” in the box “Select the annotation database you want to download”.</p>
+<p>5. While on the Galaxy platform, go to the “SnpEff eff” tool and upload the <em>outlier_snps.vcf</em> file. In “Genome source,” select “Downloaded snpEff database in your history” and in “Genome data,” select the database downloaded in the previous step.</p>
+<p>After this step, Galaxy will provide a report with statistics (in input HTML stats file) such as the number of missense variants and the number of SNPs per chromosome. A second file shows all the genes and regions in which SNPs are located. Similar to many other selection studies, most selective SNPs detected in the dataset tested herein fall outside of exons (609 intergenic and 573 intronic). There were only 25 exonic SNPs, two of which appear to be missense or non-synonymous, and these were located in candidate genes GB42150 and GB46140.</p>
+<p>While genome-wide scans provide a powerful way of highlighting candidate genes for selection, causal inferences about the molecular basis of adaptation can be obtained from functional and expression studies and also from <em>in silico</em> protein modeling (Henriques, Wallberg, et al., 2018). Nonetheless, before employing such approaches, cross-validation of detected outlier SNPs should be always sought by other conceptually different methods.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

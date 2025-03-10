@@ -1,0 +1,2333 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Section_4_6/">
+      
+      
+        <link rel="next" href="../Section_4_8/">
+      
+      
+      <link rel="icon" href="../assets/Coloss-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>4.7. Population genomics: Filtering and summary statistics using PLINK - wikiCOLOSS: Standard Methods for Apis Omics Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="yellow" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-whole-genome-population-and-association-studies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="wikiCOLOSS: Standard Methods for Apis Omics Research" class="md-header__button md-logo" aria-label="wikiCOLOSS: Standard Methods for Apis Omics Research" data-md-component="logo">
+      
+  <img src="../assets/Coloss-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            wikiCOLOSS: Standard Methods for Apis Omics Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4.7. Population genomics: Filtering and summary statistics using PLINK
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="yellow" data-md-color-accent="teal"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="blue"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="wikiCOLOSS: Standard Methods for Apis Omics Research" class="md-nav__button md-logo" aria-label="wikiCOLOSS: Standard Methods for Apis Omics Research" data-md-component="logo">
+      
+  <img src="../assets/Coloss-logo.png" alt="logo">
+
+    </a>
+    wikiCOLOSS: Standard Methods for Apis Omics Research
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why a wikiCOLOSS?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theteam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meet the team
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapt_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. The omics revolution in Apis: more data than meets the eye
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Sample management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. Genome sequencing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            3. Genome sequencing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2. Genome sequencing technologies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3. The reference genome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.4. Small and large variant detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.5. Sequencing museum specimens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4. Whole-genome population and association studies
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            4. Whole-genome population and association studies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2. Ploidy and sampling considerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3. SNP and indel detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4. Comparing whole genomes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.5. Genome-wide association studies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.6. Population genomics: Experimental design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.7. Population genomics: Filtering and summary statistics using PLINK
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4.7. Population genomics: Filtering and summary statistics using PLINK
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#47-population-genomics-filtering-and-summary-statistics-using-plink" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7. Population genomics: Filtering and summary statistics using PLINK
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7. Population genomics: Filtering and summary statistics using PLINK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-download-and-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.1. Download and installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#472-input-format-and-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2. Input format and conversion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7.2. Input format and conversion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4721-variant-call-format-vcf" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.1. Variant call format (VCF)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4722-plink-1-binary-format-bim" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.2. PLINK 1 binary format (.bim)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4723-regular-plink-text-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.3. Regular PLINK text files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4724-filtering-and-handling-missing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.4. Filtering and handling missing data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4725-computing-and-filtering-based-on-allele-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.5. Computing and filtering based on allele frequency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4726-computing-differentiation-indices-wrights-fst" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.6. Computing differentiation indices: Wright's F~ST~
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4727-estimating-linkage-disequilibrium" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.7. Estimating linkage disequilibrium
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.8. Population genomics: Inferring population structure using ADMIXTURE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.9. Landscape genomics: An example using LFMM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.10. Applying population genomics to conservation: Reduced SNP analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    5. Epigenomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            5. Epigenomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.2. DNA methylation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.3. Epitranscriptomics: RNA methylation of m6A
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.4. Chromatin organization and histone modifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    6. Transcriptomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            6. Transcriptomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2. Sequencing technologies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.3. Single-cell transcriptomics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.4. Data handling and analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    7. Functional genomics and xenobiotic treatment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            7. Functional genomics and xenobiotic treatment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2. CRISPR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.3. RNA interference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4. Xenobiotic treatment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    8. Proteomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            8. Proteomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.2. Standard methods for shot-gun proteomics sample preparation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.3. Liquid chromatography and mass spectrometry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.4. Proteomics data processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    9. Metabolomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            9. Metabolomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.2. Sample preparation for metabolomics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.3. Chromatography and mass spectrometry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.4. Metabolomics data processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.5. Metabolomics applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    10. Microbiome analysis
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            10. Microbiome analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.2. Sampling and DNA extraction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.3. Amplicon sequencing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.4. Microbiome data analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    11. Data management and open access sharing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            11. Data management and open access sharing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_11_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.1. Metadata standardization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_11_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.2. Sharing pipelines and scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. The future of Apis omics: Biological integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#47-population-genomics-filtering-and-summary-statistics-using-plink" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7. Population genomics: Filtering and summary statistics using PLINK
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7. Population genomics: Filtering and summary statistics using PLINK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-download-and-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.1. Download and installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#472-input-format-and-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2. Input format and conversion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7.2. Input format and conversion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4721-variant-call-format-vcf" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.1. Variant call format (VCF)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4722-plink-1-binary-format-bim" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.2. PLINK 1 binary format (.bim)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4723-regular-plink-text-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.3. Regular PLINK text files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4724-filtering-and-handling-missing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.4. Filtering and handling missing data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4725-computing-and-filtering-based-on-allele-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.5. Computing and filtering based on allele frequency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4726-computing-differentiation-indices-wrights-fst" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.6. Computing differentiation indices: Wright's F~ST~
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4727-estimating-linkage-disequilibrium" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2.7. Estimating linkage disequilibrium
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4-whole-genome-population-and-association-studies">4. Whole-genome population and association studies</h1>
+<h2 id="47-population-genomics-filtering-and-summary-statistics-using-plink">4.7. Population genomics: Filtering and summary statistics using <strong>PLINK</strong></h2>
+<p>In this section, we will describe some tools available for analyzing SNPs (the most common type of genetic variation used in genomic studies) using a population genomics framework. We will employ a VCF tutorial file containing 3,669,288 SNPs obtained after the variant calling of 33 individuals, 26 of which are of M-lineage ancestry (18 <em>A. m. iberiensis</em> and eight <em>A. m. mellifera</em>) and seven are of C-lineage ancestry (three <em>A. m. carnica</em> and four <em>A. m. ligustica</em>).</p>
+<p>The first step in any population genomics study is understanding and filtering the dataset by calculating summary statistics to evaluate missing data, allele frequencies, or linkage disequilibrium. To that end, several tools tailored for handling whole-genome data are publicly available, including <strong>VCFtools</strong> (Danecek et al., 2011), <strong>PLINK</strong> (Purcell et al., 2007), and several <strong>R</strong> packages such as <strong>pegas</strong> (Paradis, 2010) and <strong>PopGenome</strong> (Pfeifer et al., 2014). Here, we chose the highly versatile and efficient <strong>PLINK</strong> tool to illustrate the steps involved in filtering and in producing summary statistics for whole-genome datasets.</p>
+<p><strong>PLINK</strong> is a command-line software that runs on different operating systems such as Linux, Microsoft DOS, and macOS. Additionally, instead of using command lines, one can also use an interface through the program <strong>gPLINK</strong>, although this is only available for the most commonly-used commands. In this section, we will go over some of the basic commands that can be carried out with <strong>PLINK</strong> (version 1.9).</p>
+<h3 id="471-download-and-installation">4.7.1. Download and installation</h3>
+<p>First, download <strong>PLINK 1.9</strong> (www.cog-genomics.org/plink2/) and the tutorial dataset called <em>pop_gen</em>, which can be found on <a href="https://github.com/MaevaTecher/standard-apis-omics">github.com/MaevaTecher/standard-methods-apis-omics</a>. All the commands will be typed at the command prompt. To check that <strong>PLINK</strong> is installed, type “./plink” on the command prompt, and some information about the <strong>PLINK</strong>, like its version and examples of flags, will be printed.</p>
+<h3 id="472-input-format-and-conversion">4.7.2. Input format and conversion</h3>
+<p><strong>PLINK</strong> can operate with various input formats, the most common are regular PLINK TXT files, PLINK 1 binary BIM file, and variant call format (either VCF or BCF). <em>PLINK 1 binary</em> is the preferred input format because <strong>PLINK</strong> automatically converts the other formats to this one to save time and space. There are commands for converting the formats to each other. We will explain the most common files and provide the command line to convert them to others.</p>
+<h4 id="4721-variant-call-format-vcf">4.7.2.1. Variant call format (VCF)</h4>
+<p>Genome sequence data is very often represented in the variant call format (VCF) or its binary counterpart (bcf). The following command can be used to convert vcf into the <em>PLINK 1 binary</em> format:</p>
+<pre><code class="language-bash">plink --vcf pop_gen.vcf \
+--keep-allele-order \
+--allow-extra-chr \
+--make-bed \
+--out pop_gen
+</code></pre>
+<p>The meanings of the flags are the following:</p>
+<p><code>--vcf</code> specifies that we are using a .vcf.gz file.</p>
+<p><code>--keep-allele-order</code> specifies that the reference allele will be in the 6th column (A2) and the alternate allele in the 5th column (A1). If we do not use this flag <strong>PLINK</strong> will reorder the alleles, and in A1 and A2 columns will be the minor and major alleles, respectively.</p>
+<p><code>--allow-extra-chr</code> indicates that chromosome code does not start with a digit.</p>
+<p><code>--make-bed</code> specifies that <em>PLINK1 binary files</em> should be generated.</p>
+<p><code>--out</code> specifies the output name. If one does not use <code>--out</code>, <strong>PLINK</strong> will call the file ‘plink’, for instance ‘plink.bed’.</p>
+<p>If there are no errors, four files will be created: <em>pop_gen.bed</em>, <em>pop_gen.bim</em>, <em>pop_gen.fam</em> and <em>pop_gen</em>.<em>log</em>. The <em>pop_gen</em>.<em>log</em> file contains the command and other information that was printed to the console. The other files are explained below.</p>
+<h4 id="4722-plink-1-binary-format-bim">4.7.2.2. PLINK 1 binary format (.bim)</h4>
+<p>To work with PLINK 1 binary format, the three following files (<em>pop_gen.fam, pop_gen.bim, and pop_gen.bed</em>) will be needed:</p>
+<p>1.  <em>pop_gen.fam</em>: Contains the sample information and has the following fields:</p>
+<ul>
+<li>
+<p>Family ID (If unknown, use the individual ID)</p>
+</li>
+<li>
+<p>Individual ID (Alphanumeric ID to uniquely identify an individual and cannot be ‘0’)</p>
+</li>
+<li>
+<p>Paternal ID (If unknown, use ‘0’)</p>
+</li>
+<li>
+<p>Maternal ID (If unknown, use ‘0’)</p>
+</li>
+<li>
+<p>Sex code (Use '1' if male, '2' if female, '0' if unknown)</p>
+</li>
+<li>
+<p>Phenotype value (Use '1' if control, '2' if case, if not used set to ‘0’)</p>
+</li>
+</ul>
+<p>2.  <em>pop_gen.bim</em>: Contains the variant information and has the following columns:</p>
+<ul>
+<li>
+<p>Chromosome (It should be a digit, otherwise one needs to use the flag --keep-allele-order)</p>
+</li>
+<li>
+<p>Variant identifier (Can contain any character, except spaces, tabs or ‘*’)</p>
+</li>
+<li>
+<p>Genetic distance in morgans or centimorgans (Can be set at ‘0’)</p>
+</li>
+<li>
+<p>Base-pair coordinate (Positive integers in bp)</p>
+</li>
+<li>
+<p>Allele 1-A1 (Contains the less common allele or the alternate allele)</p>
+</li>
+<li>
+<p>Allele 2-A2 (Contains the most common allele or the reference allele)</p>
+</li>
+</ul>
+<p>3)  <em>pop_gen.bed</em>: Binary biallelic genotype data.</p>
+<p>To convert <em>PLINK 1 binary</em> format to VCF, one can use the following command:</p>
+<pre><code class="language-bash">plink --bfile pop_gene \
+--recode vcf \
+--out pop_gene
+</code></pre>
+<p><code>--bfile</code> specifies that we are using <em>PLINK 1 binary</em> format.</p>
+<p><code>--recode vcf</code> specifies to create a VCF file as an output.</p>
+<p><code>--out</code> specifies the output name.</p>
+<p><strong>Note:</strong> To do this conversion, one needs to be sure that in <em>PLINK 1 binary</em> format, the reference alleles are located in the 6^th^ column (A2).</p>
+<h4 id="4723-regular-plink-text-files">4.7.2.3. Regular PLINK text files</h4>
+<p>The regular <strong>PLINK</strong> text files are formed by the PED and MAP files. The PED file is a white-space delimited file that stores the genotype calls. It contains six mandatory fields/columns which correspond to the <em>file.fam</em>fields. After these columns, the PED file is followed by 2 (number of variants) columns with the genotype of each locus in the same order as in the MAP file. The MAP file contains the variant information corresponding to the first four columns of <em>pop_gene.bim</em>.</p>
+<p>The MAP file should have the same root name as the PED file and contain the same number of loci. For instance, if there are genotypes for 10 loci and 12 individuals, the MAP file will contain 10 lines and four columns, and the PED file will contain 12 lines and 26 columns (10 loci *2 + 6 mandatory columns). The loci in the PED file do not have to comply with the genomic order, but they must be in the same order as in the MAP file.</p>
+<p>To convert <em>PLINK 1 binary</em> format to <em>regular PLINK text</em> file, one can use the following command:</p>
+<pre><code class="language-bash">plink --bfile pop_gene \
+--recode \
+--out pop_gene
+</code></pre>
+<p>To convert a <em>regular PLINK text</em> file to 1 binary PLINK file, the following command can be run:</p>
+<pre><code class="language-bash">--make-bed \
+--out pop_gene
+</code></pre>
+<p>If there are no errors, four files will be created: <em>pop_gene.bed</em>, <em>pop_gene.bim</em>, <em>pop_gene.fam</em>, and <em>pop_gene.log</em>.</p>
+<h4 id="4724-filtering-and-handling-missing-data">4.7.2.4. Filtering and handling missing data</h4>
+<p>It is common for genome-wide datasets to have individuals or variants with missing data. This is particularly frequent and expected in low-coverage sequencing data. <strong>PLINK</strong> allows us to estimate the missing data per individual and loci using the flag --missing. A report containing the missing data per Individual ID (<em>pop_gen.imiss</em>) and variant (<em>pop_gen.lmiss</em>) can be created using the following command:</p>
+<pre><code class="language-bash">plink --bfile pop_gen --missing --out pop_gen
+</code></pre>
+<p>It is highly recommended to discard individuals or variants with high levels of missing data. The missing data thresholds are arbitrary, but values of 10% to 30% are commonly used in the literature (Henriques, Wallberg, et al., 2018; Melanie Parejo et al., 2016; Wallberg et al., 2014; Wragg et al., 2016). To remove the variants with &gt; 20% missing data (--geno 0.2) and individuals with &gt;10% missing data (--mind 0.10), for example, the following command can be run:</p>
+<pre><code class="language-bash">plink --bfile pop_gen \
+--geno 0.2 \
+--mind 0.1 \
+--make-bed \
+--out pop_gen_MD 
+</code></pre>
+<p>After implementing this command, a <em>PLINK 1 binary</em> fileset, with the root name of “pop_gen_MD”, without the problematic individuals and loci, will be created. Note that <strong>PLINK</strong> first removes individuals with too much missing data, and secondly the variants.</p>
+<h4 id="4725-computing-and-filtering-based-on-allele-frequency">4.7.2.5. Computing and filtering based on allele frequency</h4>
+<p><strong>PLINK</strong> calculates allele frequencies and filters variants with a minor allele frequency (MAF) lower than an arbitrary threshold, which is commonly set at 1% or 5%. To generate a report (<em>pop_gene_MD.frq</em>) containing allele frequencies for each variant, the following command can be run:</p>
+<pre><code class="language-bash">plink --bfile pop_gen_MD \
+--freq \
+--out pop_gen_MD 
+</code></pre>
+<p><code>--freq</code> specifies calculating the allele frequency for each variant from this dataset.</p>
+<p>In the report generated using this command, the first and second columns contain the chromosome and the variant ID followed by the code of the minor (3^rd^ column) and major (4^th^ column) variants and the frequency of the minor allele (5^th^ column). The last column (6^th^) contains the number of allele observations.</p>
+<p>To remove the variants with MAF &lt; 5%, for instance, and create a new file set (here called <em>pop_gen_MD_maf005</em>), the following command can be run:</p>
+<pre><code class="language-bash">plink --bfile pop_gen_MD \
+--maf 0.05 \
+--make-bed \
+--out pop_gen_MD_maf005 
+</code></pre>
+<p><code>--maf</code> specifies that only alleles with a minimum minor allele frequency of 5% will be kept in the dataset.</p>
+<h4 id="4726-computing-differentiation-indices-wrights-fst">4.7.2.6. Computing differentiation indices: Wright's F~ST~</h4>
+<p>PLINK also allows calculating the fixation index F~ST~ values for each variant using the Weir and Cockerham method (Weir &amp; Cockerham, 1984). To do so, the flag --fst must be combined with the flag --withinfollowed by the name of the file that specifies the sets of subpopulations to be used. In the tutorial example, the within the file, called <em>within_M_C_ind</em>, contains the Family ID in the first column, the Individual ID in the second column, and in the third column the digit 1 to identify one subpopulation (here the C-lineages subspecies) and 2 to identify the second subpopulation (here the M-lineage subspecies).</p>
+<p>To calculate the variants’ F~ST~ values between M and C-lineage, the following command can be run:</p>
+<pre><code class="language-bash">plink --bfile pop_gen_MD_maf005 \
+--fst --within within_M_C_ind \
+--out pop_gen_MD_maf005
+</code></pre>
+<p>A report called <em>pop_gen_MD_maf005.fst</em> will be generated. This report contains six columns. The first three columns contain the chromosome number, the variant ID, and the base-pair coordinates, followed by the number of called variants or non-missing genotypes (NMISS), and the 5^th^ column contains the F~ST~ values.</p>
+<h4 id="4727-estimating-linkage-disequilibrium">4.7.2.7. Estimating linkage disequilibrium</h4>
+<p>Linkage disequilibrium (LD) is the non-random association of alleles at different loci. When working with whole-genome data there will be thousands of loci that are in linkage disequilibrium due to different evolutionary forces, but also, because they are physically linked. Some analyses require the use of loci that are in linkage equilibrium (not associated), and <strong>PLINK</strong> provides an easy way to do so, for example, by using the following command:</p>
+<pre><code class="language-bash">plink --bfile pop_gen_MD_maf005 \
+    --indep-pairwise 50 
+</code></pre>
+<p>The flag <code>--indep-pairwise</code> requires three parameters: the window size, the number of SNPs to shift each step and r^2^. The values of r^2^ range between 0 and 1. When r^2^ = 1, the loci provide exactly the same information. When r^2^ = 0, the loci are in perfect equilibrium. Here, LD is calculated between each pair of SNPs using a window of 50 SNPs. If one pair of SNPs has r^2^ &gt; 0.5 one of them will be removed. After that, the window will be shifted to five SNPs, and the procedure is repeated until all SNP pairs are examined. Note that lower values of r^2^ and bigger window sizes will remove more loci.</p>
+<p>After running this command, two files will be created, one is named <em>plink.prune.in</em>, which contains the loci that will be retained (r^2^ &lt; 0.5), and the other one is named <em>plink.prune.out</em>, which contains the loci that will be discarded. These files can be used as arguments of the flags <code>--extract</code> (<em>plink.prune.in</em>) or --exclude (<em>plink.prune.out</em>).</p>
+<p>To extract to a new datafile the loci that are in the file <em>plink.prune.in, the</em> following command can be run:</p>
+<pre><code class="language-bash">plink --bfile pop_gen_MD_maf005 \
+--extract plink.prune.in \
+--make-bed \
+--out pop_gen_MD_maf005_pruneddata 
+</code></pre>
+<p>Sometimes we do not want to discard SNPs, but we want to calculate the LD in our data. LD can be computed using the flag <code>--r2</code>. However, to reduce the output size, only the pairs with r^2^ &gt; 0.2 and within a distance &lt; 1 Mb will be printed in the output by default. To modify these thresholds, the flag <code>--ld-window</code> or <code>--ld-window-kb</code> is used to specify the maximum distance between loci and the flag <code>--ld-window-r2</code> is used to specify the minimum r^2^. Using the following command, the r^2^ values will be obtained for all pairs of loci with r^2^ &gt; 0.5 in a window of 50 Kb. The output called <em>pop_gen_MD_maf005_pruneddata</em>.<em>ld</em> will be created, and the r^2^ values will be placed in the 7^th^ column.</p>
+<pre><code class="language-bash">plink --bfile pop_gen_MD_maf005_pruneddata \
+--r2 \
+--ld-window-kb 50 \
+--ld-window-r2 0.5 \
+--out pop_gen_MD_maf005_pruneddata
+</code></pre>
+<p><code>--r2</code> specifies to compute the linkage disequilibrium.</p>
+<p><code>--ld-window-kb</code> specifies the maximum distance between two loci in kilobases.</p>
+<p><code>--ld-window-r2</code> specifies the minimum r^2^ to be printed out.</p>
+<p><strong>PLINK</strong> also allows haplotype blocks to be detected in the genome using the flag <code>--blocks</code>. If arguments are not provided to this flag, the default options will be implemented. One of them is related to the maximum block size, which is by default 20 kb. To cancel this default flag, the argument no-small-max-span can be used. The flag <code>--blocks</code> without arguments assumes that in the dataset, there are phenotypes in the 6^th^ column of the PED or FAM files. If there is no phenotype data, the argument no-pheno-req is required. By default, the pairwise LD is only calculated for variants within 200 kb. If needed, this parameter can be changed using the flag <code>--blocks-max-kb</code>. An example of a command to calculate blocks along the honey bee genome can be:</p>
+<pre><code class="language-bash">plink --bfile pop_gen_MD_maf005 \
+--blocks no-pheno-req no-small-max-span \
+--blocks-max-kb 5000 \
+--out pop_gen_MD_maf005
+</code></pre>
+<p>Two files called <em>pop_gen_MD_maf005.block</em> and <em>plink.blocks.det</em> will be created. Each line of these files represents a block. The file <em>pop_gen_MD_maf005.block</em> contains the variant IDs found in each block whereas <em>plink.blocks.det</em> contains their positions. If there are 10 variant IDs or positions in one line, it means that the block contains 10 SNPs.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

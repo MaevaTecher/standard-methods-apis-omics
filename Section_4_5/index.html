@@ -1,0 +1,2453 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Section_4_4/">
+      
+      
+        <link rel="next" href="../Section_4_6/">
+      
+      
+      <link rel="icon" href="../assets/Coloss-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>4.5. Genome-wide association studies - wikiCOLOSS: Standard Methods for Apis Omics Research</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="yellow" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-whole-genome-population-and-association-studies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="wikiCOLOSS: Standard Methods for Apis Omics Research" class="md-header__button md-logo" aria-label="wikiCOLOSS: Standard Methods for Apis Omics Research" data-md-component="logo">
+      
+  <img src="../assets/Coloss-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            wikiCOLOSS: Standard Methods for Apis Omics Research
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4.5. Genome-wide association studies
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="yellow" data-md-color-accent="teal"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="blue"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="wikiCOLOSS: Standard Methods for Apis Omics Research" class="md-nav__button md-logo" aria-label="wikiCOLOSS: Standard Methods for Apis Omics Research" data-md-component="logo">
+      
+  <img src="../assets/Coloss-logo.png" alt="logo">
+
+    </a>
+    wikiCOLOSS: Standard Methods for Apis Omics Research
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why a wikiCOLOSS?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theteam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meet the team
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapt_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. The omics revolution in Apis: more data than meets the eye
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Sample management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. Genome sequencing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            3. Genome sequencing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2. Genome sequencing technologies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3. The reference genome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.4. Small and large variant detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_3_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.5. Sequencing museum specimens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4. Whole-genome population and association studies
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            4. Whole-genome population and association studies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2. Ploidy and sampling considerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3. SNP and indel detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4. Comparing whole genomes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.5. Genome-wide association studies
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4.5. Genome-wide association studies
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#45-genome-wide-association-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Genome-wide association studies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Genome-wide association studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figure-8-generic-structure-of-a-gwas-model-adapted-from-yu-et-al-2006" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure 8. Generic structure of a GWAS model (adapted from (Yu et al., 2006)).
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#451-considerations-for-phenotypic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1. Considerations for phenotypic data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-considerations-for-sample-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2. Considerations for sample selection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.2. Considerations for sample selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4521-power-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2.1. Power analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3. Materials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.3. Materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4531-computational-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3.1. Computational resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4532-genotypic-and-phenotypic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3.2. Genotypic and phenotypic data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4. Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.4. Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4541-preparation-of-phenotypic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4.1. Preparation of phenotypic data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.4.1. Preparation of phenotypic data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figure-9-correcting-phenotypic-parameters-a-example-distribution-of-phenotypic-values-before-and-after-correction-using-the-empirical-bayes-method-b-example-of-the-histogram-for-a-phenotype-before-and-after-empirical-bayes-transformation-note-the-improved-distribution-after-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure 9. Correcting phenotypic parameters. A) Example distribution of phenotypic values before and after correction using the empirical Bayes method. B) Example of the histogram for a phenotype before and after empirical Bayes transformation. Note the improved distribution after transformation.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4542-preparation-of-genotypic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4.2. Preparation of genotypic data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4543-performing-gwas-methods-and-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4.3. Performing GWAS: Methods and software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4544-detecting-signatures-of-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4.4. Detecting signatures of selection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#455-sources-of-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5. Sources of variation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#456-quality-control-and-data-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.6. Quality control and data interpretation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.6. Quality control and data interpretation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figure-10-example-diagnostic-plots-for-gwas-study-a-q-qplot-and-associated-inflation-factor-b-histogram-of-the-p-values-and-c-plot-of-snp-effects-as-a-function-of-allele-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure 10. Example diagnostic plots for GWAS study. A) Q-Qplot and associated inflation factor λ, B) histogram of the p-values and C) plot of SNP effects as a function of allele frequencies.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#457-applications-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.7. Applications and limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.6. Population genomics: Experimental design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.7. Population genomics: Filtering and summary statistics using PLINK
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.8. Population genomics: Inferring population structure using ADMIXTURE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.9. Landscape genomics: An example using LFMM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_4_10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.10. Applying population genomics to conservation: Reduced SNP analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    5. Epigenomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            5. Epigenomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.2. DNA methylation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.3. Epitranscriptomics: RNA methylation of m6A
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.4. Chromatin organization and histone modifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_5_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    6. Transcriptomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            6. Transcriptomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2. Sequencing technologies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.3. Single-cell transcriptomics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.4. Data handling and analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_6_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    7. Functional genomics and xenobiotic treatment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            7. Functional genomics and xenobiotic treatment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2. CRISPR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.3. RNA interference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4. Xenobiotic treatment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_7_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    8. Proteomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            8. Proteomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.2. Standard methods for shot-gun proteomics sample preparation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.3. Liquid chromatography and mass spectrometry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.4. Proteomics data processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_8_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    9. Metabolomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            9. Metabolomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.2. Sample preparation for metabolomics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.3. Chromatography and mass spectrometry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.4. Metabolomics data processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_9_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.5. Metabolomics applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    10. Microbiome analysis
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            10. Microbiome analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.1. Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.2. Sampling and DNA extraction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.3. Amplicon sequencing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.4. Microbiome data analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_10_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.5. Applications and limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    11. Data management and open access sharing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            11. Data management and open access sharing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_11_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.1. Metadata standardization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_11_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.2. Sharing pipelines and scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Section_12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. The future of Apis omics: Biological integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#45-genome-wide-association-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Genome-wide association studies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Genome-wide association studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figure-8-generic-structure-of-a-gwas-model-adapted-from-yu-et-al-2006" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure 8. Generic structure of a GWAS model (adapted from (Yu et al., 2006)).
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#451-considerations-for-phenotypic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1. Considerations for phenotypic data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-considerations-for-sample-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2. Considerations for sample selection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.2. Considerations for sample selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4521-power-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2.1. Power analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3. Materials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.3. Materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4531-computational-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3.1. Computational resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4532-genotypic-and-phenotypic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3.2. Genotypic and phenotypic data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4. Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.4. Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4541-preparation-of-phenotypic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4.1. Preparation of phenotypic data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.4.1. Preparation of phenotypic data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figure-9-correcting-phenotypic-parameters-a-example-distribution-of-phenotypic-values-before-and-after-correction-using-the-empirical-bayes-method-b-example-of-the-histogram-for-a-phenotype-before-and-after-empirical-bayes-transformation-note-the-improved-distribution-after-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure 9. Correcting phenotypic parameters. A) Example distribution of phenotypic values before and after correction using the empirical Bayes method. B) Example of the histogram for a phenotype before and after empirical Bayes transformation. Note the improved distribution after transformation.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4542-preparation-of-genotypic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4.2. Preparation of genotypic data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4543-performing-gwas-methods-and-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4.3. Performing GWAS: Methods and software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4544-detecting-signatures-of-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4.4. Detecting signatures of selection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#455-sources-of-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5. Sources of variation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#456-quality-control-and-data-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.6. Quality control and data interpretation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.6. Quality control and data interpretation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figure-10-example-diagnostic-plots-for-gwas-study-a-q-qplot-and-associated-inflation-factor-b-histogram-of-the-p-values-and-c-plot-of-snp-effects-as-a-function-of-allele-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figure 10. Example diagnostic plots for GWAS study. A) Q-Qplot and associated inflation factor λ, B) histogram of the p-values and C) plot of SNP effects as a function of allele frequencies.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#457-applications-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.7. Applications and limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4-whole-genome-population-and-association-studies">4. Whole-genome population and association studies</h1>
+<h2 id="45-genome-wide-association-studies">4.5. Genome-wide association studies</h2>
+<p>Genome-wide association studies (GWAS) are conducted to detect genetic markers that contribute to phenotypic variation between individuals by analyzing phenotypic and genomic information in a unified statistical model (Figure 8). This type of analysis is commonly conducted in livestock species and plants, and an extensive literature and collection of tools, software, and methodologies are available for this purpose (for a review in animal genetics, see Hayes &amp; Goddard (2010)). In this section, we will discuss GWAS in the context of honey bee studies, considering the unique attributes of this species.</p>
+<p><img alt="Figure 8" src="../assets/Figure_8.png" /></p>
+<h6 id="figure-8-generic-structure-of-a-gwas-model-adapted-from-yu-et-al-2006">Figure 8. Generic structure of a GWAS model (adapted from (Yu et al., 2006)).</h6>
+<h3 id="451-considerations-for-phenotypic-data">4.5.1. Considerations for phenotypic data</h3>
+<p>Many different phenotypes or observations are compatible with GWAS. Examples for <em>Apis</em> honey bees include, but are not limited to:</p>
+<ul>
+<li>
+<p>Traits of agronomic interest, such as honey production, gentleness, or low propensity to swarm</p>
+</li>
+<li>
+<p>Traits linked to phenotypic plasticity and social behavior, such as precocious forager age</p>
+</li>
+<li>
+<p>Traits linked to morphology, such as pigmentation or wing venation</p>
+</li>
+<li>
+<p>Traits linked to survival, such as resistance to parasites (<em>Varroa spp.</em>, <em>Tropilaelaps spp.</em>, small hive beetle), to viruses, or to specific environmental conditions</p>
+</li>
+<li>
+<p>Traits linked to the colony or individual health, such as viral or bacterial load</p>
+</li>
+<li>
+<p>Traits focusing on genome structure, such as variable recombination rate</p>
+</li>
+</ul>
+<p>Ideally, these characteristics should be measured in a standard way across all the ‘individuals’ or ‘units’ (<em>e.g.</em>, colony, caste, or single bee specimen). Measuring traits at the superorganism unit (colony) or at individual levels can be more or less relevant depending on the trait of interest. Traits can be binary, as in a case/control association study (<em>e.g.</em>, survival, presence or absence of a virus, performance or not of behavior, <em>etc</em>.), categorical (<em>e.g.</em>, gentleness scored in classes), or continuous (<em>e.g.</em> honey production measured in kilograms). If focusing on a continuous phenotype, it is necessary to analyze individuals representing the whole expected spectrum to distinguish markers impacting the phenotype.</p>
+<h3 id="452-considerations-for-sample-selection">4.5.2. Considerations for sample selection</h3>
+<p>GWAS can be performed on individual samples or composite samples of individuals from the same colony (see <a href="https://maevatecher.github.io/standard-methods-apis-omics/Part_4_2/">Section 4.2</a> for details on ploidy considerations). Individual samples can represent different colonies or, when more than one individual per colony is sampled, individuals within a colony. These samples may be workers, queens, or drones. For any sample type, an appropriate sample size should be estimated to ensure the analysis has sufficient power to detect associations.</p>
+<h4 id="4521-power-analysis">4.5.2.1. Power analysis</h4>
+<p>Prior to performing a case/control association study, it is useful to estimate the power needed to detect significant markers given a specific experimental design. Such power of detection is linked to the number of individuals in the case versus control group, the number of markers tested and the difference in allele frequency between the two groups. The <strong>R</strong> package <strong>pwr</strong> is strictly dedicated for power analysis functions (Champely et al., 2017, 2018).</p>
+<h3 id="453-materials">4.5.3. Materials</h3>
+<h4 id="4531-computational-resources">4.5.3.1. Computational resources</h4>
+<p>GWAS requires at least a computer (for small studies), up to a high-performance cluster (for large studies). Specific informatic tools such as <strong>R</strong> or other dedicated software programs (discussed below) for data manipulation, statistical analysis, and visualization are also needed.</p>
+<h4 id="4532-genotypic-and-phenotypic-data">4.5.3.2. Genotypic and phenotypic data</h4>
+<p>Genomic information can be found traditionally in the form of a genotype matrix extracted from VCF files, where different genotypes are specified as 0, 1 and 2. Alternative formats, such as allele frequencies, are also becoming more and more common and highly useful for honey bee genomic studies. A matrix linking phenotypic observations to sample identifiers will also be needed.</p>
+<h3 id="454-methods">4.5.4. Methods</h3>
+<h4 id="4541-preparation-of-phenotypic-data">4.5.4.1. Preparation of phenotypic data</h4>
+<p>Classical GWAS methods rely on the assumption that the phenotype of interest follows a normal distribution. Therefore, depending on the trait, corrections such as log, logit, square-root, cube root or, empirical Bayes might be needed to adjust the phenotype distribution to the assumed normality. Unfortunately, as corrections need to be tested independently, no standard protocol can be described here.</p>
+<p>We present below an example of an <strong>R</strong> script to perform empirical Bayes correction with beta distribution (Figure 9A). The beta distribution is often used for empirical Bayes correction as the variety of alpha and beta parameters defining the distribution allow for a large range of probability density functions representing most of the observed distribution for ratios and proportions (Figure 9B).</p>
+<pre><code class="language-r">library(MASS) #Load library
+df$pheno = df$num / df$den #estimation of the phenotype as a ratio of num (numerator) on den (denominator)
+eb_fit = fitdistr( x = df$pheno[ !is.na(df$pheno) &amp; df$pheno &gt; 0 &amp; df$pheno &lt; 1 ], densfun = &quot;beta&quot;, start = list(shape1 = 1, shape2 = 1), method = &quot;L-BFGS-B&quot; ) #fit of beta distributions to the estimated phenotype
+aprior = eb_fit$estimate #alpha parameter for the beta distribution estimate for our phenotype
+bprior = eb_fit$estimate #beta parameter for the beta distribution estimate for our phenotype
+df$pheno_eb = (aprior + df$num) / (aprior + bprior + df$den) #corrected phenotype
+</code></pre>
+<p><img alt="Figure 9" src="../assets/Figure_9.png" /></p>
+<h6 id="figure-9-correcting-phenotypic-parameters-a-example-distribution-of-phenotypic-values-before-and-after-correction-using-the-empirical-bayes-method-b-example-of-the-histogram-for-a-phenotype-before-and-after-empirical-bayes-transformation-note-the-improved-distribution-after-transformation">Figure 9. Correcting phenotypic parameters. A) Example distribution of phenotypic values before and after correction using the empirical Bayes method. B) Example of the histogram for a phenotype before and after empirical Bayes transformation. Note the improved distribution after transformation.</h6>
+<h4 id="4542-preparation-of-genotypic-data">4.5.4.2. Preparation of genotypic data</h4>
+<p>Prior to running a GWAS analysis, we recommend performing a quality control analysis on the genotypes (Wragg et al., 2021). Depending on your data, these quality controls can be based on:\</p>
+<ul>
+<li>
+<p>Technical and sequencing characteristics such as genotyping quality (QUAL &gt; 200 and QD &gt; 20), depth (20x), or even calling rate (&gt; 95%).</p>
+</li>
+<li>
+<p>Minor allele frequencies (MAF &gt; 0.05), or rare variants, are much harder to test accurately than common ones. Depending on the read coverage, rare variants are likely associated with genotyping errors and are often removed without further considerations.</p>
+</li>
+<li>
+<p>Linkage disequilibrium (LD), as assumed for the GWAS models, relies on the independence of the tested markers; therefore, one might want to filter on a LD threshold. Doing so will remove redundancy in the genomic information and might strengthen the signal for some markers of interest.</p>
+</li>
+</ul>
+<h4 id="4543-performing-gwas-methods-and-software">4.5.4.3. Performing GWAS: Methods and software</h4>
+<p>Multiple software and packages are available to perform GWAS easily from genomic data (for a partial listing, see in <a href="https://bioinformaticshome.com/tools/gwas/gwas.html#gsc.tab=0">GWAS tools platform</a>). One standard and popular software is <strong>PLINK</strong> (Purcell et al., 2007). It contains a large panel of functions from data manipulation and filtering to GWAS analysis, making it a preferred tool for analyzing individual diploid data. <strong>PLINK</strong> is compatible with binary phenotype variables (case/control) as could be expected for, <em>e.g.</em>, survival. In such a case, standard chi-square analysis on each marker individually can be used. This test gives test statistics and p-values for the difference in allele frequency between the case and control group. See <a href="https://maevatecher.github.io/standard-methods-apis-omics/Part_4_7/">Section 4.7</a> for more information on using <strong>PLINK</strong>.</p>
+<p>However, in <em>Apis</em> honey bee colonies, traits are often measured at the group level, making pooled-sample genotype information (<em>e.g.</em> allele frequencies or mean genotypes) more relevant. To deal with such data types, we list some tools that have been adapted to be able to analyze pooled data. We recommend using <strong>GEMMA</strong> for analyzing pooled-sample data (Zhou &amp; Stephens, 2012), which allows for mixed linear models as well as Bayesian inference. For small datasets (hundreds of samples), the <strong>LDAK</strong> (Speed et al., 2012) software might be more suitable for performing GWAS. Additionally, <strong>LDAK</strong> also offers potential GWAS computation based on gene annotation rather than genotypes. This allows a straightforward interpretation of the functional effect, since only differences within annotated genes are detected, and reduces the number of statistical tests performed. While new tools are continuously developed to perform GWAS with different settings and data types, the field still lacks dedicated methods that can deal specifically with honey bees and haplodiploidy.</p>
+<h4 id="4544-detecting-signatures-of-selection">4.5.4.4. Detecting signatures of selection</h4>
+<p>Although it is not solely restricted to association studies, detecting selection signals (<em>i.e.</em> stabilizing selection, directional selection, and diversifying selection) is of significant interest in honey bee genetic analysis to assign selection signals along the genome for specific traits (also known as phenomics). Several software options are available for this purpose, such as <strong>FLK</strong> and <strong>hapFLK</strong> (Bonhomme et al., 2010; Fariello et al., 2013). The use of such methods has helped characterize soft selective sweep in Africanized honey bees in invasive areas (Avalos et al., 2017), through a temporal sampling in native Swiss populations (Parejo et al., 2020) and in association with beekeeping practices (Wragg et al., 2016). Avalos et al., (2017) have curated customs bash and <strong>R</strong> scripts available as supplemental notes, which we recommend as a reproducible workflow using <strong>RsB</strong> for any users who want to start such analysis with honey bee samples (Tang et al., 2007).</p>
+<h3 id="455-sources-of-variation">4.5.5. Sources of variation</h3>
+<p>Population structure might need to be accounted for by adding covariates in the GWAS model. Such covariates can come from genetic background information (vectors of genetic admixture, commonly called Q vectors), principal component analysis eigenvalues for population structure, environmental effects such as the apiary, effects linked to the beekeeping practice (see <a href="https://maevatecher.github.io/standard-methods-apis-omics/Part_4_6/">Section 4.6</a> on population genomics). In addition, a kinship matrix (the relationship between individuals) can be included in the model. This matrix can be estimated based on pedigree records (Brascamp &amp; Bijma, 2014), though it is often challenging for honey bees to have complete genetic records. In <em>Apis</em> honey bees, it is especially interesting to consider such a matrix, as relationships across individuals within a colony deviate from standard estimates in diploid livestock species. The software <strong>LDAK</strong> offers additional features. One such feature is the possibility of computing genetic relationship matrices (GRMs) from weighted polymorphisms, which is equivalent to trimming our genomic information based on linkage disequilibrium, as suggested in <a href="https://maevatecher.github.io/standard-methods-apis-omics/Part_4_5/">Section 4.5.4.2</a>.</p>
+<p>In case/control association studies, rigorous experimental design is advantageous, in the sense that matching case and control individuals according to environmental conditions, genetic background, <em>etc.</em>, will authorize the researcher to ignore these variables in the analysis.</p>
+<h3 id="456-quality-control-and-data-interpretation">4.5.6. Quality control and data interpretation</h3>
+<p>To validate that the GWAS performed matches the model hypotheses, we recommend running multiple diagnostic analyses. The most common diagnostic is to draw the Q-Q plot for p-values of the GWAS using <strong>R</strong>. This method allows us to check for an agreement between expected and observed p-values. If a deviation from the expectation is observed, this is a sign of improper fit of the model to the data. This generally indicates that either the phenotype is not properly modeled or that population stratification or structure is not accounted for in the GWAS model. A strong deviation from the diagonal in Q-Q plot (Figure 10A) should lead to further investigation and repetition of the GWAS. Another diagnostic approach can be performed on p-values, as they are expected to follow a uniform distribution. Therefore, checking the histogram of p-values is a relevant diagnostic plot for a good fit of the model (Figure 10B). Finally, checking for unexpected correlations between SNP effects and allele frequencies can inform on misfit of the model or of errors in our data set (Figure 10C).</p>
+<p><img alt="Figure 10" src="../assets/Figure_10.png" /></p>
+<h6 id="figure-10-example-diagnostic-plots-for-gwas-study-a-q-qplot-and-associated-inflation-factor-b-histogram-of-the-p-values-and-c-plot-of-snp-effects-as-a-function-of-allele-frequencies">Figure 10. Example diagnostic plots for GWAS study. A) Q-Qplot and associated inflation factor λ, B) histogram of the p-values and C) plot of SNP effects as a function of allele frequencies.</h6>
+<p>After validation of the study based on the diagnostic plots presented above, we recommend looking into the markers’ p-values and effects. The decision on the significant threshold cut-off for the markers associated with a trait of interest is crucial (often between 1 and 5%). Traditional corrections for multiple testing, such as Bonferroni, can be used but are often too stringent and might cause one to ignore relevant markers. For GWAS, controlling the false discovery rate (FDR) is a standard approach. Recently more methods, like <strong>ash</strong> (Stephens, 2016), are less conservative and better adapted to complex phenotypes. This method expects phenotypes to be highly polygenic with most markers having a negligible effect on the phenotype itself, as can be anticipated for complex honey bee traits. Recent developments have also made it possible to combine multiple analyses on different populations or even phenotypes using the software <strong>Mantra</strong> and <strong>Mr Mega</strong> (Morris, 2011) or <strong>Mash</strong> (Urbut et al., 2019).</p>
+<p>Once diagnostic tests are completed, it is time to interpret the effects of the markers, if identified, to describe the genotype/phenotype association. In some studies, a few markers may be detected with large and highly significant effects. In this case, the markers are strong candidates to explain the causal mutation underlying the trait. More often, many markers are detected, having small but significant effects. This is often the case in complex traits that tend to be highly polygenic. If markers are identified, the final step is to inspect the genomic regions of interest and identify candidate causal genes to try to interpret the biological pathways involved.</p>
+<h3 id="457-applications-and-limitations">4.5.7. Applications and limitations</h3>
+<p>The pinnacle goal of GWAS is to identify genetic underpinnings of specific characteristics. The possibilities of traits to focus on are endless, but to date, association studies in honey bees have focused mostly on traits linked to beekeeping practices (Guichard et al., 2021), disease or parasite resistance (Spötter et al., 2016), and health (Wu et al., 2020)<em>.</em> In other studies, genome-wide scans have been used to identify selection signals for population-specific features such as royal jelly production (Wragg et al., 2016). Although genetic markers for specific traits were first identified through quantitative trait loci (QTL) mapping (see Evans <em>et al.</em> (2013) for a description of this technique), the technique has fallen out of favor as high-throughput sequencing has become more accessible.</p>
+<p>Performing GWAS on honey bees can be challenging because the breeding system often makes the colony, which has a diverse genetic makeup, the unit of interest. Moreover, limitations arise whenever divergent and structured populations in honey bees are analyzed together without being properly accounted for in the GWAS model. For example, if bees belonging to different subspecies are analyzed together for a phenotype, the markers identified might be representatives of the different genetic types rather than linked to the phenotype of interest. This can also impact comparative genomics studies (see <a href="https://maevatecher.github.io/standard-methods-apis-omics/Part_4_4/">Section 4.4</a>) and can lead to misguided interpretations of mechanisms underlying traits of interest.</p>
+<p>On top of estimating the effects and significance of targeted markers associated with a trait, it is also possible to evaluate trait heritability with GWAS (Brascamp &amp; Bijma, 2019; Guichard et al., 2021; Jourdan-Pineau et al., 2021). Such heritability measures are population-specific and might vary across studies focusing on different individuals and environments. Furthermore, genomic heritability estimates in honey bees might differ from pedigree heritability estimates, as they are not straightforward to approximate due to haplodiploidy and multiple mating (Jourdan-Pineau et al., 2021). Such heritability information is particularly useful for guiding selective breeding programs.</p>
+<p>So far, few research projects report genome wide association study results in honey bees but have already informed on genomic regions associated with aggressive behavior (Avalos et al., 2020; Guichard et al., 2021; Sokolowski, 2020), adaptation to mountainous environments (Everitt et al., 2023), and disease tolerance (Hassanyar et al., 2023). With the increasing availability of genomic data, due to reduction in sequencing costs and improved availability of genotyping chips, we can expect a growth in this field.</p>
+<p>However, genome wide association studies in honey bee genomics may still face major challenges. Honey bee genomic data can have high complexity, as it may be derived from workers, drones, or pools of individuals, and there is a lack of dedicated methods to perform GWAS in haplo-diploid organisms. Furthermore, many desirable phenotypes are scored at the colony level, necessitating pooled sampling. Many of these traits (<em>e.g.</em> behaviors) are also complex themselves, and can be highly polymorphic, conditional, and polygenic.</p>
+<p>Consequently, although efforts are underway (Grozinger &amp; Zayed, 2020), it has been exceedingly challenging for GWAS results to contribute to selection decisions in the form of genomic markers with strong prediction potential for traits of interest. GWAS may be better suited to understanding the biological mechanisms underlying traits of interest for honey bee research.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
